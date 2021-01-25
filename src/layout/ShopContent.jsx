@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import ItemsListing from '../components/ItemsListing'
 import FlitersPane from './FlitersPane'
 
 const ShopContent = () => {
@@ -8,20 +9,12 @@ const ShopContent = () => {
                     {/* <!-- Left sidebar & main wrapper --> */}
                     <div class="flex-1 min-w-0 bg-white xl:flex">
                         <FlitersPane />
-
-                        <div class="bg-white lg:min-w-0 lg:flex-1">
-                            <div class="h-full py-6 px-4 sm:px-6 lg:px-8">
-                                {/* <!-- Start main area--> */}
-                                <div class="relative h-full" >
-                                    <div class="absolute inset-0 rounded-lg"></div>
-                                </div>
-                                {/* <!-- End main area --> */}
-                            </div>
-                        </div>
+                        <ItemsListing />
+                        
                     </div>
 
                     <div class="bg-white  lg:flex-shrink-0 lg:border-l lg:border-gray-200 xl:pr-0">
-                        <div class="h-full pl-6 py-6 lg:w-80">
+                        <div class="h-full pl-6 py-6 lg:w-72">
                             {/* <!-- Start right column area --> */}
                             <div class="h-full relative" >
                                 <div class="absolute inset-0  rounded-lg"></div>

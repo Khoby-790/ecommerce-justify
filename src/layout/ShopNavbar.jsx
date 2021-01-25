@@ -39,21 +39,10 @@ const ShopNavbar = () => {
                             {/* <!-- Mobile menu button --> */}
                             <button class="bg-gray-600 inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" aria-expanded="false">
                                 <span class="sr-only">Open main menu</span>
-                                {/* <!-- Icon when menu is closed. -->
-            <!--
-              Heroicon name: menu-alt-1
 
-              Menu open: "hidden", Menu closed: "block"
-            --> */}
                                 <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                                 </svg>
-                                {/* <!-- Icon when menu is open. -->
-            <!--
-              Heroicon name: x
-
-              Menu open: "block", Menu closed: "hidden"
-            --> */}
                                 <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
@@ -63,37 +52,27 @@ const ShopNavbar = () => {
                         <div class="hidden lg:block lg:w-80">
                             <div class="flex items-center justify-end">
                                 <div class="flex">
-                                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-white">Documentation</a>
-                                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-white">Support</a>
+
                                 </div>
                                 {/* <!-- Profile dropdown --> */}
                                 <div class="ml-4 relative flex-shrink-0">
-                                    <div>
-                                        <button class="bg-indigo-700 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white" id="user-menu" aria-haspopup="true">
+                                    <div onClick={() => setShowProfileMenu(c => !c)}>
+                                        <button class="bg-yellow-600 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white" id="user-menu" aria-haspopup="true">
                                             <span class="sr-only">Open user menu</span>
-                                            <div onClick={() => setShowProfileMenu(true)} className="bg-yellow-600 h-10 w-10 flex items-center justify-center rounded-full">
+                                            <div className=" h-10 w-10 flex items-center justify-center rounded-full">
                                                 <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80" alt="" />
                                             </div>
                                         </button>
                                     </div>
-                                    {/* <!--
-                Profile dropdown panel, show/hide based on dropdown state.
 
-                Entering: "transition ease-out duration-100"
-                  From: "transform opacity-0 scale-95"
-                  To: "transform opacity-100 scale-100"
-                Leaving: "transition ease-in duration-75"
-                  From: "transform opacity-100 scale-100"
-                  To: "transform opacity-0 scale-95"
-              --> */}
 
                                     <Transition
                                         show={showProfileMenu}
                                         enter="transition ease-out duration-100"
                                         enterFrom="transform opacity-0 scale-95"
-                                        enterTo="transform opacity-0 scale-95"
+                                        enterTo="transform opacity-100 scale-95"
                                         leave="transition ease-in duration-75"
-                                        leaveFrom="transform opacity-0 scale-95"
+                                        leaveFrom="transform opacity-100 scale-95"
                                         leaveTo="transform opacity-0 scale-95"
                                     >
                                         <div ref={profileMenuRef} class="origin-top-right absolute z-10 right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">

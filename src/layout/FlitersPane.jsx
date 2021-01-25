@@ -34,7 +34,7 @@ const categoriesListing = [
 const FlitersPane = () => {
     return (
         <Fragment>
-            <div class="border-b border-gray-200 xl:border-b-0 xl:flex-shrink-0 xl:w-80 xl:border-r xl:border-gray-200 bg-white">
+            <div class="border-b border-gray-200 xl:border-b-0 xl:flex-shrink-0 xl:w-72 xl:border-r xl:border-gray-200 bg-white">
                 <div class="h-full py-2 sm:pl-6 lg:pl-8 xl:pl-0">
                     <div class="h-full relative" >
                         <div class="absolute inset-0">
