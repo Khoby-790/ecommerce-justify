@@ -1,13 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BiCart } from 'react-icons/bi'
 import { ImWhatsapp } from 'react-icons/im'
-import { WhatsappShareButton } from 'react-share'
+import Modal from './Modal'
 
 
 const SelectedItem = () => {
     const dispatch = useDispatch();
+    const [showPhoneModal, setShowPhoneModal] = useState(false);
     const item = useSelector(state => state.selectedSneaker)
 
     // add to cart
@@ -39,7 +40,7 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">
-                                        <a onClick={() => { }} className="text-green-600 flex items-center outline-none focus:outline-none">
+                                        <a onClick={() => setShowPhoneModal(true)} className="text-green-600 flex items-center outline-none focus:outline-none">
                                             <ImWhatsapp className="mr-3" />
                                             share item
                                         </a>
@@ -89,6 +90,11 @@ const SelectedItem = () => {
                     {/* <!-- End right column area --> */}
                 </div>
             </div>
+
+            <Modal show={showPhoneModal} setShow={setShowPhoneModal} size={35}>
+
+            </Modal>
+
         </Fragment>
     )
 }

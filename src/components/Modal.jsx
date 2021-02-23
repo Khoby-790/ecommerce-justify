@@ -1,7 +1,7 @@
 import React, { useRef, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { useOutsideClick } from '../hooks';
-import Transition from './Transitions';
+import Transition from './Transition';
 
 const Modal = ({ show, setShow, size, children, canClose }) => {
     const ref = useRef(null);
