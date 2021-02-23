@@ -18,6 +18,17 @@ const Cart = () => {
                                     </div>
                                 </Fragment>
                             )}
+                            <h3 className="font-light text-2xl">Your cart</h3>
+                            <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
+                            {cart.map((cartItem, cartIndex) => (
+                                <div className="flex justify-between">
+                                    <div className="w-1/3">
+                                        <img src={cartItem?.original_picture_url} alt="" />
+                                    </div>
+                                    <div className="flex-1"></div>
+                                </div>
+                            ))}
+
                         </div>
                     </div>
                     {/* <!-- End right column area --> */}
