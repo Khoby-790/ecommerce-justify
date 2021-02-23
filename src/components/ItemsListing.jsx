@@ -23,8 +23,8 @@ const ItemsListing = () => {
         for (let i = 0; i < allCategories.length; i++) {
             const category = allCategories[i];
             _categories.concat(category);
+            console.log(_categories)
         }
-        console.log(_categories)
     }, [])
 
     return (
