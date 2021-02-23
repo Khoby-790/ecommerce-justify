@@ -29,7 +29,7 @@ const Cart = () => {
                                         <h3 className="font-bold">{cartItem.name}</h3>
                                         <p>{cartItem?.designer}</p>
                                         <div className="flex justify-end">
-                                            <p className="mt-3 font-semibold">{cartItem.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
+                                            <p className="mt-3 font-semibold text-green-600">{cartItem.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
                                         </div>
                                     </div>
                                 </div>
