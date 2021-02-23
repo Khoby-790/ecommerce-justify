@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { SortDropDown } from '.';
 
 
@@ -44,9 +44,17 @@ export default ItemsListing
 const Item = ({ item }) => {
     const categories = useSelector(state => state.selectedCategories || [])
     const categorySelected = categories.some(e => item?.category?.includes(e))
+    const dispatch = useDispatch();
+
+    const selectItem = () => {
+        dispatch({
+            type: "SelectSneaker",
+            payload: item
+        })
+    }
 
     return categorySelected ? (
-        <div className="h-auto cursor-pointer mr-3 ml-2 mb-2  border dark:border-gray-500 border-gray-300 rounded-lg overflow-hidden">
+        <div onClick={selectItem} className="h-auto cursor-pointer mr-3 ml-2 mb-2  border dark:border-gray-500 border-gray-300 rounded-lg overflow-hidden">
             <div className="absolute h-10 w-2 bg-gray-700 dark:bg-white mt-4 -ml-2  "></div>
             <div className="p-3 ">
                 <h4 className="font-light  text-gray-400">{item.designer}</h4>
