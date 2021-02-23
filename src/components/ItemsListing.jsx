@@ -5,12 +5,17 @@ import faker from 'faker';
 import sneakers from '../assets/shops.json'
 
 
-const sortList = ["Prize", "In Stock", "Size", "Color"]
+const sortList = ["Prize", "In Stock", "Size", "Color"];
+
+const allCategories = sneakers.map(el => el.category);
 
 const ItemsListing = () => {
 
     const [items] = useState(sneakers);
 
+    useEffect(() => {
+        console.log(allCategories)
+    }, [])
 
     return (
         <Fragment>
@@ -59,9 +64,4 @@ const Item = ({ item }) => {
                 </div>
                 <div>
                     <h3 className="font-thin text-lg text-gray-400">Price</h3>
-                    <h2>{item.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
-                </div>
-            </div>
-        </div>
-    )
-}
+                    <h2>{item.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
