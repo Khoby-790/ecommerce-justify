@@ -17,9 +17,12 @@ const Cart = () => {
 
                             {item &&
                                 <Fragment>
-                                    <div className="flex flex-1">
+                                    <div className="flex flex-col flex-1">
                                         <div className="h-auto">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
+                                        </div>
+                                        <div className="flex justify-center">
+                                            <h2 className="font-bold text-2xl">{item.name}</h2>
                                         </div>
                                     </div>
                                 </Fragment>
