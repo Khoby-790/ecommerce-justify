@@ -23,7 +23,7 @@ const Cart = () => {
                                         </div>
                                         <div className="flex flex-col justify-center">
                                             <h2 className="font-bold text-2xl text-center">{item.name}</h2>
-                                            <h4>{item.designer}</h4>
+                                            <h4 className="text-center dark:text-gray-600 text-gray-500">{item.designer}</h4>
                                         </div>
                                     </div>
                                 </Fragment>
