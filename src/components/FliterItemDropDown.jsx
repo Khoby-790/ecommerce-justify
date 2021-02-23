@@ -11,9 +11,9 @@ const FliterItemDropDown = ({ name, list = [] }) => {
 
                 <Fragment>
                     {!showDetails ?
-                        <FiChevronDown onClick={() => setShowDetails(c => !c)} className="cursor-pointer text-white" size={20} />
+                        <FiChevronDown onClick={() => setShowDetails(c => !c)} className="cursor-pointer text-dark dark:text-white" size={20} />
                         :
-                        <FiChevronUp onClick={() => setShowDetails(c => !c)} color="#000" className="cursor-pointer" size={20} />
+                        <FiChevronUp onClick={() => setShowDetails(c => !c)} className="cursor-pointer text-dark dark:text-white" size={20} />
                     }
                 </Fragment>
 
@@ -27,7 +27,7 @@ const FliterItemDropDown = ({ name, list = [] }) => {
                 leaveTo="opacity-0 d-none scale-95"
                 show={showDetails}
             >
-                <ul class="relative bg-white rounded-md -space-y-px">
+                <ul class="relative bg-white dark:bg-gray-700 rounded-md -space-y-px">
                     {list.map(({ label, value }, key) => (
                         <li key={key}>
                             {/* <!-- On: "bg-indigo-50 border-indigo-200 z-10", Off: "border-gray-200" --> */}
