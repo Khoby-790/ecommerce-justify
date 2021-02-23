@@ -1,14 +1,8 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment } from 'react'
 import FliterItemDropDown from '../components/FliterItemDropDown';
-import sneakers from '../assets/shops.json'
 import { useDispatch, useSelector } from 'react-redux';
 
 
-function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
-}
-
-const allCategories = sneakers.map(el => el.category);
 
 const shippedFromList = [
     {
@@ -28,7 +22,6 @@ const FlitersPane = () => {
     const { categories, selectedCategories } = useSelector(state => state)
 
     const onCategoryClicked = value => {
-        // alert(value)
         dispatch({
             type: "SelectCategory",
             payload: value
