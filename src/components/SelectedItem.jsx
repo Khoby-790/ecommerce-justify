@@ -22,8 +22,8 @@ const SelectedItem = () => {
                         <div class="absolute inset-0 rounded-lg">
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
-                                    <div className="flex-1">
-                                        <div className="h-auto">
+                                    <div className="flex-1 bg-yellow-500 overflow-visible">
+                                    <div className="h-auto">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
                                         <div className="flex flex-col justify-center">
@@ -47,7 +47,7 @@ const SelectedItem = () => {
                                     </div>
 
 
-                                    <div className="">
+                                    <div className="h-32">
                                         <div onClick={addToCart} className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
                                             <div className="flex px-4 items-center justify-center">
                                                 <BiCart className="text-white dark:text-gray-900" />
