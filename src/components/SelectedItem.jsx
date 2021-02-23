@@ -27,11 +27,11 @@ const SelectedItem = () => {
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
                                         <div className="flex flex-col justify-center">
-                                            <h2 className="font-bold text-2xl text-white text-center">{item.name}</h2>
+                                            <h2 className="font-bold text-2xl dark:text-white text-center">{item.name}</h2>
                                             <h4 className="text-center dark:text-gray-300 text-gray-500">{item.designer}</h4>
                                         </div>
                                         <div className="mt-6">
-                                            <h3 className="font-bold">Select Size</h3>
+                                            <h3 className="font-bold dark:text-gray-400">Select Size</h3>
                                             <div className="flex overflow-scroll mt-2">
                                                 {item.size_range?.map((size, sizeIndex) => (
                                                     <div key={sizeIndex} className="h-11 w-11 px-4 dark:bg-white bg-gray-900 text-white dark:text-gray-600 flex dark:border-gray-300 items-center rounded-md justify-center border mr-4 border-gray-800">{size}</div>
@@ -40,8 +40,8 @@ const SelectedItem = () => {
                                         </div>
 
                                         {item.story_html && <div className="mt-2">
-                                            <h3 className="font-bold">Description</h3>
-                                            <div className="mt-1" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
+                                            <h3 className="font-bold dark:text-gray-400">Description</h3>
+                                            <div className="mt-1 font-thin dark:text-gray-300" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
                                             </div>
                                         </div>}
                                     </div>
