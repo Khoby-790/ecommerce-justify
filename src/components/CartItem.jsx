@@ -1,8 +1,28 @@
-import React, { Fragment, useState } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { Fragment, useEffect, useState } from 'react'
 import { FaPlus, FaMinus } from 'react-icons/fa'
+import { useDispatch } from 'react-redux';
 
 const CartItem = ({ cartItem }) => {
-    const [qty, setQty] = useState(0);
+    const [qty, setQty] = useState(1);
+    const dispatch = useDispatch()
+    const increaseQty = () => {
+        setQty(prev => prev + 1)
+    }
+
+    const decreaseQty = () => {
+        setQty(prev => prev - 1)
+    }
+
+    useEffect(() => {
+        if (qty < 1) {
+            dispatch({
+                type: "removeSneaker",
+                payload: cartItem
+            })
+        }
+    }, [qty])
+
     return (
         <Fragment>
             <div className="flex mt-2 justify-between">
@@ -14,13 +34,13 @@ const CartItem = ({ cartItem }) => {
                     <p className="dark:text-gray-400">{cartItem?.designer}</p>
                     <div className="flex mt-4 pr-4 justify-between">
                         <div className="flex">
-                            <div className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-l-lg max-h-6 w-11 h-full px-2">
+                            <div onClick={increaseQty} className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-l-lg max-h-6 w-11 h-full px-2">
                                 <FaPlus className="dark:text-white" />
                             </div>
                             <div className="border flex items-center justify-center border-gray-800 dark:border-white max-h-6 w-6 h-full px-2">
                                 {qty}
                             </div>
-                            <div className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-r-lg max-h-6 w-11 h-full px-2">
+                            <div onClick={decreaseQty} className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-r-lg max-h-6 w-11 h-full px-2">
                                 <FaMinus className="dark:text-white" />
                             </div>
                         </div>
