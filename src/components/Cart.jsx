@@ -5,7 +5,7 @@ import { BiCart } from 'react-icons/bi'
 
 const Cart = () => {
     const item = useSelector(state => state.selectedSneaker)
-    return (
+    return !item ? null : (
         <Fragment>
             <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
                 <div class="h-full px-6 py-6 lg:w-full">
