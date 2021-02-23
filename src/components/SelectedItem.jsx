@@ -23,7 +23,7 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-end">
-                                        <button className="text-red-600">Cancel</button>
+                                        <button className="text-red-600 outline-none focus:outline-none">Cancel</button>
                                     </div>
                                     <div className="flex-1 pb-3 overflow-scroll">
                                         <div className="h-46">
