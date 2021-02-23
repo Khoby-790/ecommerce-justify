@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import ItemsListing from '../components/ItemsListing'
 import FlitersPane from './FlitersPane'
 import SelectedItem from '../components/SelectedItem'
+import Cart from '../components/Cart'
 
 const ShopContent = () => {
     return (
@@ -13,6 +14,7 @@ const ShopContent = () => {
                     <ItemsListing />
                 </div>
                 <SelectedItem />
+                <Cart />
             </div>
 
         </Fragment>
