@@ -21,7 +21,7 @@ const Modal = ({ show, setShow, size, children, canClose }) => {
                         leaveFrom="translate-x-0"
                         leaveTo="opacity-0">
                         <div className="fixed  inset-0 transition-opacity">
-                            <div className="absolute inset-0 bg-gray-500 opacity-50" />
+                            <div className="absolute inset-0 opacity-50" />
                         </div>
                     </Transition>
 

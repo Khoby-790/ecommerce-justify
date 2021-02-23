@@ -94,7 +94,10 @@ const SelectedItem = () => {
             <Modal show={showPhoneModal} setShow={setShowPhoneModal} size={35}>
                 <div className="bg-white flex flex-col py-4 px-4">
                     <label htmlFor="phonenumber">Phone Number</label>
-                    <input type="text" className="border h-11 px-3 focus:outline-none " />
+                    <input type="text" min={10} max={13} className="border h-11 px-3 focus:outline-none " />
+                    <button onClick={share} className="bg-green-600 px-4 mt-3 text-white">
+                        Send link
+                    </button>
                 </div>
             </Modal>
 
