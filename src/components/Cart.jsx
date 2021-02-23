@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import EmptyCartIcon from './EmptyCartIcon'
+import { BiCart } from 'react-icons/bi'
 
 const Cart = () => {
     const item = useSelector(state => state.selectedSneaker)
@@ -36,6 +37,7 @@ const Cart = () => {
 
                                         <div className="mt-11">
                                             <div className="flex w-full cursor-pointer items-center justify-center rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
+                                                <BiCart />
                                                 <h2>Add to cart</h2>
                                             </div>
                                         </div>
