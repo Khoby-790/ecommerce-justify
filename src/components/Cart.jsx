@@ -7,7 +7,7 @@ const Cart = () => {
     return (
         <Fragment>
             <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
-                <div class="h-full pl-6 py-6 lg:w-72">
+                <div class="h-full px-6 py-6 lg:w-full">
                     {/* <!-- Start right column area --> */}
                     <div class="h-full relative" >
                         <div class="absolute inset-0 rounded-lg">
@@ -18,7 +18,7 @@ const Cart = () => {
                             {item &&
                                 <Fragment>
                                     <div className="flex flex-1">
-                                        <div className="h-42 bg-red-400">
+                                        <div className="h-auto">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
                                     </div>
