@@ -15,7 +15,7 @@ const SelectedItem = () => {
 
     return !item ? null : (
         <Fragment>
-            <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
+            <div class="bg-white dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
                 <div class="h-full px-6 py-6 lg:w-full">
                     {/* <!-- Start right column area --> */}
                     <div class="h-full relative overflow-scroll" >
@@ -27,7 +27,7 @@ const SelectedItem = () => {
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
                                         <div className="flex flex-col justify-center">
-                                            <h2 className="font-bold text-2xl text-center">{item.name}</h2>
+                                            <h2 className="font-bold text-2xl text-white text-center">{item.name}</h2>
                                             <h4 className="text-center dark:text-gray-300 text-gray-500">{item.designer}</h4>
                                         </div>
                                         <div className="mt-6">
