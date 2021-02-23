@@ -33,8 +33,8 @@ const FliterItemDropDown = ({ name, list = [] }) => {
                             {/* <!-- On: "bg-indigo-50 border-indigo-200 z-10", Off: "border-gray-200" --> */}
                             <div class="relative border rounded-tl-md rounded-tr-md py-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-1">
                                 <label class="flex items-center text-sm cursor-pointer">
-                                    <input value={value} name="pricing_plan" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-gray-600 cursor-pointer bg-gray-600 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0" />
-                                    <span class="ml-3 font-light text-gray-900">{label}</span>
+                                    <input value={value} name="pricing_plan" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-gray-600 dark:text-white cursor-pointer dark:bg-white bg-gray-600 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0" />
+                                    <span class="ml-3 font-light dark:text-white text-gray-900">{label}</span>
                                 </label>
                             </div>
                         </li>
