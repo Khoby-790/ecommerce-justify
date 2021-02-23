@@ -9,7 +9,7 @@ const Cart = () => {
     return item ? null : (
         <Fragment>
             <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
-                <div class="h-full px-2 py-6 lg:w-full">
+                <div class="h-full px-2 py-3 lg:w-full">
                     {/* <!-- Start right column area --> */}
                     <div class="h-full relative overflow-scroll" >
                         <div class="absolute inset-0 rounded-lg">
@@ -30,7 +30,7 @@ const Cart = () => {
                                     ))}
                                 </div>
 
-                                <div className="max-h-11">
+                                <div className="h-13">
                                     <div onClick={() => { }} className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
                                         <div className="flex px-4 items-center justify-center">
                                             <svg className="text-white h-6 dark:text-gray-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
