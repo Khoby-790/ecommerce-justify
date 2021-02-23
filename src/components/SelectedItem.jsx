@@ -98,7 +98,7 @@ const SelectedItem = () => {
                 <div className="bg-white flex flex-col py-4 px-4">
                     <label htmlFor="phonenumber">Phone Number</label>
                     <input value={number} onChange={e => setNumber(e.target.value)} type="text" min={10} max={13} className="border h-11 px-3 focus:outline-none " />
-                    <button onClick={share} className="bg-green-600 px-4 mt-3 text-white">
+                    <button onClick={share} className="bg-green-600 py-4 px-4 mt-3 text-white">
                         Send link
                     </button>
                 </div>
