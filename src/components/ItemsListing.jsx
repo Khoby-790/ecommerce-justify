@@ -13,7 +13,7 @@ const sortList = ["Prize", "In Stock", "Size", "Color"];
 const ItemsListing = () => {
 
     const items = useSelector(state => state.sneakers)
-
+    const categories = useSelector(state => state.categories)
     return (
         <Fragment>
             <div class="bg-white dark:bg-gray-800 lg:min-w-0 lg:flex-1">
@@ -31,7 +31,7 @@ const ItemsListing = () => {
 
                             <div className="flex-1 grid grid-cols-2">
 
-                                {items.map((item, key) => <Item key={key} item={item} />)}
+                                {items.filter(el => el.categories?.includes(categories)).map((item, key) => <Item key={key} item={item} />)}
 
                             </div>
 
