@@ -35,9 +35,9 @@ const Cart = () => {
                                             </div>
                                         </div>
 
-                                        <div>
-                                            <h3 className="font-bold">Select Size</h3>
-                                            <div className="mt-2" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
+                                        <div className="mt-2">
+                                            <h3 className="font-bold">Description</h3>
+                                            <div className="mt-1" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
                                             </div>
                                         </div>
 
