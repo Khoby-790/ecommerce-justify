@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import CartItem from './CartItem';
 import EmptyCartIcon from './EmptyCartIcon'
+import { BiCart } from 'react-icons/bi'
 
 const Cart = () => {
     const { selectedSneaker: item, cart } = useSelector(state => state);
@@ -21,7 +22,7 @@ const Cart = () => {
                             )}
                             <div className="h-full flex justify-between flex-col">
 
-                                <div className="flex-1">
+                                <div className="flex-1 overflow-scroll">
                                     <h3 className="font-light text-2xl">Your cart</h3>
                                     <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
                                     {cart.map((cartItem, cartIndex) => (
@@ -30,7 +31,15 @@ const Cart = () => {
                                 </div>
 
                                 <div className="max-h-11">
-                                        Hello
+                                    <div onClick={() => { }} className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
+                                        <div className="flex px-4 items-center justify-center">
+                                            <BiCart className="text-white dark:text-gray-900" />
+                                            <h2 className="ml-6">Add to cart</h2>
+                                        </div>
+                                        <div className="px-4">
+                                            <h2 className="dark:text-gray-900 font-extrabold text-white">{item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
