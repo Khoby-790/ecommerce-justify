@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import FliterItemDropDown from '../components/FliterItemDropDown';
 import sneakers from '../assets/shops.json'
+import { useSelector } from 'react-redux';
 
 
 function onlyUnique(value, index, self) {
@@ -42,17 +43,8 @@ const categoriesListing = [
 ]
 
 const FlitersPane = () => {
-    const [categories, setCategories] = useState([]);
 
-    useEffect(() => {
-        let _categories = [];
-        for (let i = 0; i < allCategories.length; i++) {
-            const category = allCategories[i];
-            _categories = [..._categories, ...category]
-        }
-        _categories = _categories.filter(onlyUnique)
-        setCategories((prev) => [..._categories.map(el => ({ label: el, value: el }))])
-    }, [])
+    const categories = useSelector(state => state.categories)
 
     return (
         <Fragment>

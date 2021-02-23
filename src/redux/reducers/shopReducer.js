@@ -15,7 +15,7 @@ for (let i = 0; i < allCategories.length; i++) {
 _categories = _categories.filter(onlyUnique)
 
 const initialState = {
-    sneakers: [],
+    sneakers: sneakers,
     selectedSneaker: null,
     categories: _categories,
     selectedCategories: []
