@@ -28,8 +28,15 @@ const Cart = () => {
                                     <div className="flex-1">
                                         <h3 className="font-bold">{cartItem.name}</h3>
                                         <p>{cartItem?.designer}</p>
-                                        <div className="flex justify-between">
-                                            <p className="mt-3 font-semibold text-green-600 dark:text-yellow-300">{cartItem.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
+                                        <div className="flex mt-4 justify-between">
+                                            <div className="flex">
+                                                <div className="border rounded-l-lg max-h-6 w-11 h-full px-2"></div>
+                                                <div className="border max-h-6 w-6 h-full px-2"></div>
+                                                <div className="border rounded-r-lg max-h-6 w-11 h-full px-2"></div>
+                                            </div>
+                                            <div className="flex">
+                                                <p className="mt-3 font-semibold text-green-600 dark:text-yellow-300">{cartItem.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
