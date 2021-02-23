@@ -37,6 +37,13 @@ function shopReducer(state = initialState, action) {
                 ...state,
                 selectedCategories: hasIt ? [...state.selectedCategories.filter(el => el !== action.payload)] : [...state.selectedCategories, action.payload]
             }
+
+        case "addToCart":
+            return {
+                ...state,
+                cart: [...state.cart, state.selectedSneaker],
+                selectedSneaker: null
+            }
         default:
             return state;
     }
