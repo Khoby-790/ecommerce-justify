@@ -6,12 +6,12 @@ const FliterItemDropDown = ({ name, list = [] }) => {
     const [showDetails, setShowDetails] = useState(false);
     return (
         <Fragment>
-            <div className="bg-white border-b border-gray-300 flex p-4 justify-between">
-                <h3 className="text-gray-700 font-medium">{name}</h3>
+            <div className="bg-white dark:bg-gray-800 border-b border-gray-300 flex p-4 justify-between">
+                <h3 className="text-gray-700 dark:text-white font-medium">{name}</h3>
 
                 <Fragment>
                     {!showDetails ?
-                        <FiChevronDown onClick={() => setShowDetails(c => !c)} color="#000" className="cursor-pointer" size={20} />
+                        <FiChevronDown onClick={() => setShowDetails(c => !c)} className="cursor-pointer text-white" size={20} />
                         :
                         <FiChevronUp onClick={() => setShowDetails(c => !c)} color="#000" className="cursor-pointer" size={20} />
                     }
