@@ -19,11 +19,21 @@ const Cart = () => {
                                     </div>
                                 </Fragment>
                             )}
-                            <h3 className="font-light text-2xl">Your cart</h3>
-                            <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
-                            {cart.map((cartItem, cartIndex) => (
-                                <CartItem key={cartIndex} index={cartIndex} cartItem={cartItem} />
-                            ))}
+                            <div className="h-full flex justify-between flex-col">
+
+                                <div className="flex-1">
+                                    <h3 className="font-light text-2xl">Your cart</h3>
+                                    <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
+                                    {cart.map((cartItem, cartIndex) => (
+                                        <CartItem key={cartIndex} index={cartIndex} cartItem={cartItem} />
+                                    ))}
+                                </div>
+
+                                <div className="max-h-11">
+                                        Hello
+                                </div>
+
+                            </div>
 
                         </div>
                     </div>
