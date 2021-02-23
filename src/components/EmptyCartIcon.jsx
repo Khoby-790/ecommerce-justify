@@ -8,6 +8,7 @@ function EmptyCartIcon() {
       height="400.971"
       data-name="Layer 1"
       viewBox="0 0 896 747.971"
+      className="dark:text-white"
     >
       <path
         fill="#2f2e41"
