@@ -64,4 +64,9 @@ const Item = ({ item }) => {
                 </div>
                 <div>
                     <h3 className="font-thin text-lg text-gray-400">Price</h3>
-                    <h2>{item.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
+                    <h2>{item.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
+                </div>
+            </div>
+        </div>
+    )
+}
