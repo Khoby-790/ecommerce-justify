@@ -2,29 +2,14 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { SortDropDown } from '.';
 import faker from 'faker';
 
-
+import sneakers from '../assets/shops.json'
 
 
 const sortList = ["Prize", "In Stock", "Size", "Color"]
 
 const ItemsListing = () => {
 
-    const [items, setItems] = useState([]);
-
-
-    useEffect(() => {
-        const _ = []
-        for (let index = 0; index < 12; index++) {
-            const element = {
-                specialty: faker.commerce.productAdjective(),
-                price: faker.commerce.price(75, 450, 2, "GHC"),
-                image: faker.image.fashion(72, 80),
-                name: faker.commerce.productName()
-            }
-            _.push(element);
-        }
-        setItems(_);
-    }, [])
+    const [items] = useState(sneakers);
 
 
     return (
