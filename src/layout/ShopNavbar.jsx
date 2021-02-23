@@ -89,7 +89,7 @@ const ShopNavbar = () => {
                                 </div>
                                 <div onClick={() => setTheme(theme)} className="relative h-13 w-13 cursor-pointer flex justify-center items-center ml-3 rounded-full">
                                     {theme === "dark" ?
-                                        <svg className="h-11 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <svg className="h-6 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
                                         </svg>
                                         :
@@ -99,8 +99,8 @@ const ShopNavbar = () => {
                                     }
                                 </div>
                                 <div className="h-13 w-13 cursor-pointer flex justify-center items-center ml-3 rounded-full">
-                                    <svg className="h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                    <svg className="h-6 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd" />
                                     </svg>
                                 </div>
                             </div>
