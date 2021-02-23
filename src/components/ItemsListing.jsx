@@ -1,8 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useState } from 'react'
+import { useSelector } from 'react-redux';
 import { SortDropDown } from '.';
-import faker from 'faker';
 
-import sneakers from '../assets/shops.json'
 
 
 
@@ -13,10 +12,7 @@ const sortList = ["Prize", "In Stock", "Size", "Color"];
 
 const ItemsListing = () => {
 
-    const [items] = useState(sneakers);
-
-
-
+    const items = useSelector(state => state.sneakers)
 
     return (
         <Fragment>
