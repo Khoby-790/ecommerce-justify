@@ -18,7 +18,8 @@ const ItemsListing = () => {
             const element = {
                 specialty: faker.commerce.productAdjective(),
                 price: faker.commerce.price(75, 450, 2, "GHC"),
-                image: faker.image.fashion(72, 80)
+                image: faker.image.fashion(72, 80),
+                name: faker.commerce.productName()
             }
             _.push(element);
         }

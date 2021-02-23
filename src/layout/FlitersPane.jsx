@@ -40,7 +40,6 @@ const FlitersPane = () => {
                         <div class="absolute inset-0">
                             <FliterItemDropDown name="Shipped From" list={shippedFromList} />
                             <FliterItemDropDown name="Categories" list={categoriesListing} />
-
                         </div>
                     </div>
                 </div>
