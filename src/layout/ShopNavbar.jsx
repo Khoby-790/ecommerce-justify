@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Transition } from '../components';
+import Cart from '../components/Cart';
 import { useOutsideClick } from '../hooks';
 import useDarkMode from '../hooks/useDarkMode';
 
@@ -10,6 +12,8 @@ const ShopNavbar = () => {
     useOutsideClick(profileMenuRef, () => {
         setShowProfileMenu(false)
     })
+
+    const cart = useSelector(state => state.cart)
 
     const [theme, setTheme] = useDarkMode();
 
@@ -102,6 +106,7 @@ const ShopNavbar = () => {
                                     <svg className="h-6 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd" />
                                     </svg>
+                                    <div className="bg-yellow-500 absolute bottom-3 rounded-full right-0 flex items-center justify-center p-2 max-h-3 h-full w-3">{cart.length}</div>
                                 </div>
                             </div>
                         </div>
