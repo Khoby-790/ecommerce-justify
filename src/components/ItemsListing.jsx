@@ -48,7 +48,10 @@ export default ItemsListing
 
 const Item = ({ item }) => {
     const categories = useSelector(state => state.selectedCategories || [])
-    return (
+
+    const categorySelected = categories.length
+
+    return !categorySelected || categories.some(e => item.categories.include(e)) ? (
         <div className="h-auto cursor-pointer mr-3 ml-2 mb-2  border dark:border-gray-500 border-gray-300 rounded-lg overflow-hidden">
             <div className="absolute h-10 w-2 bg-gray-700 dark:bg-white mt-4 -ml-2  "></div>
             <div className="p-3 ">
@@ -64,5 +67,5 @@ const Item = ({ item }) => {
                 </div>
             </div>
         </div>
-    )
+    ) : null
 }
