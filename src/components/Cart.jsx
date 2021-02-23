@@ -25,6 +25,14 @@ const Cart = () => {
                                             <h2 className="font-bold text-2xl text-center">{item.name}</h2>
                                             <h4 className="text-center dark:text-gray-600 text-gray-500">{item.designer}</h4>
                                         </div>
+                                        <div>
+                                            <h3>Select Size</h3>
+                                            <div className="flex overflow-scroll">
+                                                {item.size_range?.map((size, sizeIndex) => (
+                                                    <div className="h-11 w-16 flex items-center justify-center border mx-4 border-gray-800">{size}</div>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
                                 </Fragment>
                             }
