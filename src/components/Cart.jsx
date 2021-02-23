@@ -7,7 +7,7 @@ const Cart = () => {
     return item ? null : (
         <Fragment>
             <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
-                <div class="h-full px-6 py-6 lg:w-full">
+                <div class="h-full px-2 py-6 lg:w-full">
                     {/* <!-- Start right column area --> */}
                     <div class="h-full relative overflow-scroll" >
                         <div class="absolute inset-0 rounded-lg">
@@ -21,11 +21,14 @@ const Cart = () => {
                             <h3 className="font-light text-2xl">Your cart</h3>
                             <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
                             {cart.map((cartItem, cartIndex) => (
-                                <div className="flex justify-between">
+                                <div className="flex mt-2 justify-between">
                                     <div className="w-1/3">
                                         <img src={cartItem?.original_picture_url} alt="" />
                                     </div>
-                                    <div className="flex-1"></div>
+                                    <div className="flex-1">
+                                        <h3 className="font-bold">{cartItem.name}</h3>
+                                        <p>{cartItem?.designer}</p>
+                                    </div>
                                 </div>
                             ))}
 
