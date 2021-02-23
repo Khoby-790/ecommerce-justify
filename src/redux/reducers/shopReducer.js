@@ -41,7 +41,7 @@ function shopReducer(state = initialState, action) {
         case "addToCart":
             return {
                 ...state,
-                cart: [...state.cart, state.selectedSneaker],
+                cart: [...state.cart.filter(item => item.id !== state.selectedSneaker.id), state.selectedSneaker],
                 selectedSneaker: null
             }
         default:
