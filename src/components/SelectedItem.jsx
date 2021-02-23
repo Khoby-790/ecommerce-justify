@@ -21,8 +21,8 @@ const SelectedItem = () => {
                     <div class="h-full relative overflow-scroll" >
                         <div class="absolute inset-0 rounded-lg">
                             <Fragment>
-                                <div className="flex flex-col flex-1">
-                                    <div>
+                                <div className="flex justify-between flex-col h-full">
+                                    <div className="flex-1">
                                         <div className="h-auto">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
