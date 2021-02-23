@@ -4,8 +4,8 @@ function EmptyCartIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="896"
-      height="747.971"
+      width="400"
+      height="400.971"
       data-name="Layer 1"
       viewBox="0 0 896 747.971"
     >

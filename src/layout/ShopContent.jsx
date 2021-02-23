@@ -15,7 +15,13 @@ const ShopContent = () => {
                 <div class="bg-white  max-w-md w-full lg:flex-shrink-0 lg:border-l lg:border-gray-200 xl:pr-0">
                     <div class="h-full pl-6 py-6 lg:w-72">
                         {/* <!-- Start right column area --> */}
-                        <EmptyCartIcon />
+                        <div class="h-full relative" >
+                            <div class="absolute inset-0 rounded-lg">
+                                <div className="h-60 w-60">
+                                    <EmptyCartIcon />
+                                </div>
+                            </div>
+                        </div>
                         {/* <!-- End right column area --> */}
                     </div>
                 </div>
