@@ -41,8 +41,8 @@ const Cart = () => {
                                                     <BiCart className="text-white dark:text-gray-900" />
                                                     <h2 className="ml-6">Add to cart</h2>
                                                 </div>
-                                                <div>
-
+                                                <div className="px-4">
+                                                    <h2 className="dark:text-gray-900 font-extrabold text-white">{item.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
                                                 </div>
                                             </div>
                                         </div>
