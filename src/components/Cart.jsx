@@ -28,6 +28,7 @@ const Cart = () => {
                                     <div className="flex-1">
                                         <h3 className="font-bold">{cartItem.name}</h3>
                                         <p>{cartItem?.designer}</p>
+                                        <p className="mt-3 font-semibold">{cartItem.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
                                     </div>
                                 </div>
                             ))}
