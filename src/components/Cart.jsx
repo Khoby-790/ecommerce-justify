@@ -6,6 +6,9 @@ import { BiCart } from 'react-icons/bi'
 
 const Cart = () => {
     const { selectedSneaker: item, cart } = useSelector(state => state);
+
+    const sumOfCart = cart.reduce((acc, curr) => acc + (curr.qty * curr.retail_price_cents), 0)
+
     return item ? null : (
         <Fragment>
             <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
@@ -39,7 +42,7 @@ const Cart = () => {
                                             <h2 className="ml-6">Checkout</h2>
                                         </div>
                                         <div className="px-4">
-                                            <h2 className="dark:text-gray-900 font-extrabold text-white">{item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
+                                            <h2 className="dark:text-gray-900 font-extrabold text-white">{sumOfCart?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
                                         </div>
                                     </div>
                                 </div>
