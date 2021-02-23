@@ -8,6 +8,7 @@ import Modal from './Modal'
 
 const SelectedItem = () => {
     const dispatch = useDispatch();
+    const [number, setNumber] = useState("")
     const [showPhoneModal, setShowPhoneModal] = useState(false);
     const item = useSelector(state => state.selectedSneaker)
 
@@ -25,7 +26,7 @@ const SelectedItem = () => {
     }
 
     const share = () => {
-        window.open(`https://wa.me/+233274488676/?text=${message}`, "blank")
+        window.open(`https://wa.me/+233${number.slice(-9)}/?text=${message}`, "blank")
     }
 
     const message = `hey i just found the ${item?.name} and you wont believe it, it goes for a cool ${item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
@@ -94,7 +95,7 @@ const SelectedItem = () => {
             <Modal show={showPhoneModal} setShow={setShowPhoneModal} size={35}>
                 <div className="bg-white flex flex-col py-4 px-4">
                     <label htmlFor="phonenumber">Phone Number</label>
-                    <input type="text" min={10} max={13} className="border h-11 px-3 focus:outline-none " />
+                    <input value={number} onChange={e => setNumber(e.target.value)} type="text" min={10} max={13} className="border h-11 px-3 focus:outline-none " />
                     <button onClick={share} className="bg-green-600 px-4 mt-3 text-white">
                         Send link
                     </button>
