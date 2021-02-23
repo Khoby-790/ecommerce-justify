@@ -55,10 +55,11 @@ const Item = ({ item }) => {
                 <h1>{item.designer}</h1>
 
                 <div className="h-46 w-full ">
-                    <img src={item.original_picture_url} className="h-full w-full" alt=""/>
+                    <img src={item.original_picture_url} className="h-full w-full" alt="" />
                 </div>
                 <div>
                     <h3 className="font-thin text-lg text-gray-400">Price</h3>
+                    <h2>${item.retail_price_cents.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
                 </div>
             </div>
         </div>
