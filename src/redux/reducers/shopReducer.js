@@ -15,7 +15,7 @@ for (let i = 0; i < allCategories.length; i++) {
 _categories = _categories.filter(onlyUnique)
 
 const initialState = {
-    sneakers: sneakers,
+    sneakers: sneakers.filter(el => el.retail_price_cents),
     selectedSneaker: null,
     categories: _categories.map(el => ({ label: el, value: el })),
     selectedCategories: _categories,
