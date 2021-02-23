@@ -13,9 +13,11 @@ const sortList = ["Prize", "In Stock", "Size", "Color"];
 const ItemsListing = () => {
 
     const items = useSelector(state => state.sneakers)
+    const categories = useSelector(state => state.selectedCategories || [])
     return (
         <Fragment>
             <div class="bg-white dark:bg-gray-800 lg:min-w-0 lg:flex-1">
+                {JSON.stringify(categories)}
                 <div class="h-full py-6 px-2 sm:px-6 lg:px-2">
                     {/* <!-- Start main area--> */}
                     <div class="relative h-full overflow-scroll" >

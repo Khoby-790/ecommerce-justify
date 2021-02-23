@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import FliterItemDropDown from '../components/FliterItemDropDown';
 import sneakers from '../assets/shops.json'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 function onlyUnique(value, index, self) {
@@ -43,11 +43,15 @@ const categoriesListing = [
 ]
 
 const FlitersPane = () => {
-
+    const dispatch = useDispatch()
     const categories = useSelector(state => state.categories)
 
     const onCategoryClicked = value => {
-        alert(value)
+        // alert(value)
+        dispatch({
+            type: "SelectCategory",
+            payload: value
+        })
     }
 
     return (
