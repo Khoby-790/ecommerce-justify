@@ -13,7 +13,7 @@ const SelectedItem = () => {
         })
     }
 
-    const message = `hey i just found the ${item.name} and you wont believe it, it goes for a cool ${item.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
+    const message = `hey i just found the ${item?.name} and you wont believe it, it goes for a cool ${item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
 
     return !item ? null : (
         <Fragment>
