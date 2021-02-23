@@ -30,9 +30,7 @@ const Cart = () => {
                                         <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
                                     </div>
                                     <div className="flex justify-end">
-                                        <a target="blank" href="https://wa.me/0274488676/?text=urlencodedtext" className="text-green-600 outline-none focus:outline-none">
-                                            share link
-                                        </a>
+                                        
                                     </div>
                                 </div>
                                 <div className="flex-1 pb-4 overflow-scroll">
