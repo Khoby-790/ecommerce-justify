@@ -1,9 +1,18 @@
 import React, { Fragment } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { BiCart } from 'react-icons/bi'
 
 const SelectedItem = () => {
+    const dispatch = useDispatch();
     const item = useSelector(state => state.selectedSneaker)
+
+    // add to cart
+    const addToCart = () => {
+        dispatch({
+            type: "addToCart",
+        })
+    }
+
     return !item ? null : (
         <Fragment>
             <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
@@ -37,7 +46,7 @@ const SelectedItem = () => {
 
 
                                     <div className="mt-6">
-                                        <div className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
+                                        <div onClick={addToCart} className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
                                             <div className="flex px-4 items-center justify-center">
                                                 <BiCart className="text-white dark:text-gray-900" />
                                                 <h2 className="ml-6">Add to cart</h2>
