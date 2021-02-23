@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BiCart } from 'react-icons/bi'
+import { ImWhatsapp } from 'react-icons/im'
+
 
 const SelectedItem = () => {
     const dispatch = useDispatch();
@@ -25,7 +27,8 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">
-                                        <a target="blank" href={`https://wa.me/0274488676/?text=${message}`} className="text-green-600 outline-none focus:outline-none">
+                                        <a target="blank" href={`https://wa.me/0274488676/?text=${message}`} className="text-green-600 flex items-center outline-none focus:outline-none">
+                                            <ImWhatsapp className="mr-3" />
                                             share item
                                         </a>
                                         <button className="text-red-600 outline-none focus:outline-none">Cancel</button>
