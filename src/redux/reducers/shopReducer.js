@@ -31,7 +31,20 @@ function shopReducer(state = initialState, action) {
                 ...state,
                 selectedSneaker: { ...action.payload, qty: 1 }
             }
-
+        case "increaseQty":
+            const cart = state.cart;
+            cart[action.payload] = { ...cart[action.payload], qty: cart[action.payload] + 1 }
+            return {
+                ...state,
+                cart: cart
+            }
+        case "decreaseQty":
+            const _cart = state.cart;
+            _cart[action.payload] = { ..._cart[action.payload], qty: _cart[action.payload] + 1 }
+            return {
+                ...state,
+                cart: _cart
+            }
         case "removeSneaker":
             return {
                 ...state,
