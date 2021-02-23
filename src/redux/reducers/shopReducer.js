@@ -20,3 +20,24 @@ const initialState = {
     categories: _categories,
     selectedCategories: []
 };
+
+
+function shopReducer(state = initialState, action) {
+    switch (action.type) {
+        case "SelectSneaker":
+            return {
+                ...state,
+                selectedSneaker: action.payload
+            }
+        case "SelectCategory":
+            const hasIt = state.selectedCategories.find(el => el === action.payload)
+            return {
+                ...state,
+                selectedCategories: hasIt ? [...state.selectedCategories.filter(el => el !== action.payload)] : [...state.selectedCategories, action.payload]
+            }
+        default:
+            return state;
+    }
+}
+
+export default shopReducer;
