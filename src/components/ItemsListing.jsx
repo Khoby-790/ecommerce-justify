@@ -51,9 +51,10 @@ export default ItemsListing
 const Item = ({ item }) => {
     const categories = useSelector(state => state.selectedCategories || [])
 
-    const categorySelected = categories.length
+    const categorySelected = categories.some(e => item?.categories?.includes(e))
+    console.log("State:::", categorySelected)
 
-    return !categorySelected || categories.some(e => item?.categories?.includes(e)) ? (
+    return categories.some(e => item?.categories?.includes(e)) ? (
         <div className="h-auto cursor-pointer mr-3 ml-2 mb-2  border dark:border-gray-500 border-gray-300 rounded-lg overflow-hidden">
             <div className="absolute h-10 w-2 bg-gray-700 dark:bg-white mt-4 -ml-2  "></div>
             <div className="p-3 ">
