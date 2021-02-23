@@ -42,7 +42,8 @@ const categoriesListing = [
 ]
 
 const FlitersPane = () => {
-    const [categories, setCategories] = useState([])
+    const [categories, setCategories] = useState([]);
+
     useEffect(() => {
         let _categories = [];
         for (let i = 0; i < allCategories.length; i++) {
@@ -50,14 +51,13 @@ const FlitersPane = () => {
             _categories = [..._categories, ...category]
         }
         _categories = _categories.filter(onlyUnique)
-        setCategories((prev) => [...prev, ..._categories.map(el => ({ label: el, value: el }))])
+        setCategories((prev) => [..._categories.map(el => ({ label: el, value: el }))])
     }, [])
 
     return (
         <Fragment>
             <div class="border-b border-gray-200 xl:border-b-0 xl:flex-shrink-0 xl:w-72 xl:border-r xl:border-gray-200 bg-white">
                 <div class="h-full py-2 sm:pl-6 lg:pl-8 xl:pl-0">
-                    {JSON.stringify(categories)}
                     <div class="h-full relative" >
                         <div class="absolute inset-0">
                             <FliterItemDropDown name="Shipped From" list={shippedFromList} />
