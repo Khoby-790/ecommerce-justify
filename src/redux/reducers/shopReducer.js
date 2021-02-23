@@ -12,7 +12,7 @@ for (let i = 0; i < allCategories.length; i++) {
     const category = allCategories[i];
     _categories = [..._categories, ...category]
 }
-_categories = _categories.filter(onlyUnique)
+_categories = _categories.filter(onlyUnique).map(el => ({ label: el, value: el }))
 
 const initialState = {
     sneakers: sneakers,
