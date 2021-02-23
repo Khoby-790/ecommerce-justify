@@ -17,8 +17,8 @@ const Cart = () => {
 
                             {item &&
                                 <Fragment>
-                                    <div className="flex">
-                                        <div className="h-42 w-full bg-red-400 items-center">
+                                    <div className="flex flex-1">
+                                        <div className="h-42 bg-red-400">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
                                     </div>
