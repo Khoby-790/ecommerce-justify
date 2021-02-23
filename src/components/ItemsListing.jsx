@@ -60,7 +60,7 @@ const Item = ({ item }) => {
                 <h4 className="font-light text-gray-400">{item.designer}</h4>
                 <h1>{item.name}</h1>
 
-                <div className="h-46 w-full ">
+                <div className="h-42 w-full ">
                     <img src={item.original_picture_url} className="h-full w-full" alt="" />
                 </div>
                 <div>
