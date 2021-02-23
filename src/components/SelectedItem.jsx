@@ -41,7 +41,7 @@ const SelectedItem = () => {
 
                                         {item.story_html && <div className="mt-2">
                                             <h3 className="font-bold dark:text-gray-400">Description</h3>
-                                            <div className="mt-1 font-thin dark:text-gray-300" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
+                                            <div className="mt-1  dark:font-light dark:text-gray-300" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
                                             </div>
                                         </div>}
                                     </div>
