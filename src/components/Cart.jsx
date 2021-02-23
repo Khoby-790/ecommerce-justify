@@ -25,11 +25,11 @@ const Cart = () => {
                                             <h2 className="font-bold text-2xl text-center">{item.name}</h2>
                                             <h4 className="text-center dark:text-gray-600 text-gray-500">{item.designer}</h4>
                                         </div>
-                                        <div>
+                                        <div className="mt-6">
                                             <h3>Select Size</h3>
-                                            <div className="flex overflow-scroll">
+                                            <div className="flex overflow-scroll mt-2">
                                                 {item.size_range?.map((size, sizeIndex) => (
-                                                    <div className="h-11 w-11 px-4 flex items-center justify-center border mr-4 border-gray-800">{size}</div>
+                                                    <div className="h-11 w-11 px-4 flex items-center rounded-md justify-center border mr-4 border-gray-800">{size}</div>
                                                 ))}
                                             </div>
                                         </div>
