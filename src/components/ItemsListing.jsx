@@ -23,10 +23,10 @@ const ItemsListing = () => {
             <div class="bg-white lg:min-w-0 lg:flex-1">
                 <div class="h-full py-6 px-2 sm:px-6 lg:px-2">
                     {/* <!-- Start main area--> */}
-                    <div class="relative h-full" >
+                    <div class="relative h-full overflow-scroll" >
                         <div class="absolute inset-0 rounded-lg">
                             {/* Sort Layer */}
-                            <div className="flex justify-between">
+                            <div className="flex justify-between mb-3">
                                 <h1 className="font-bold text-xl">New Arrivals</h1>
                                 <SortDropDown title="Sort By" list={sortList} />
                             </div>
