@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BiCart } from 'react-icons/bi'
@@ -38,7 +39,7 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">
-                                        <a target="blank" onClick={} className="text-green-600 flex items-center outline-none focus:outline-none">
+                                        <a onClick={() => { }} className="text-green-600 flex items-center outline-none focus:outline-none">
                                             <ImWhatsapp className="mr-3" />
                                             share item
                                         </a>
