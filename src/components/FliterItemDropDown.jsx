@@ -6,7 +6,7 @@ const FliterItemDropDown = ({ name, list = [] }) => {
     const [showDetails, setShowDetails] = useState(false);
     return (
         <Fragment>
-            <div className="bg-white dark:bg-gray-800 border-b border-gray-300 flex p-4 justify-between">
+            <div className="bg-white dark:bg-gray-800 border-b dark:border-gray-500 border-gray-300 flex p-4 justify-between">
                 <h3 className="text-gray-700 dark:text-white font-medium">{name}</h3>
 
                 <Fragment>
@@ -31,7 +31,7 @@ const FliterItemDropDown = ({ name, list = [] }) => {
                     {list.map(({ label, value }, key) => (
                         <li key={key}>
                             {/* <!-- On: "bg-indigo-50 border-indigo-200 z-10", Off: "border-gray-200" --> */}
-                            <div class="relative border dark:border-gray-400  py-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-1">
+                            <div class="relative border dark:border-gray-500  py-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-1">
                                 <label class="flex items-center text-sm cursor-pointer">
                                     <input value={value} name="pricing_plan" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-gray-600 dark:text-white cursor-pointer dark:bg-white bg-gray-600 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0" />
                                     <span class="ml-3 font-light dark:text-white text-gray-900">{label}</span>
