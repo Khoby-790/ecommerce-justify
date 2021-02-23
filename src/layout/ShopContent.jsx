@@ -12,7 +12,7 @@ const ShopContent = () => {
                     <FlitersPane />
                     <ItemsListing />
                 </div>
-                <div class="bg-white  max-w-md w-full lg:flex-shrink-0 lg:border-l lg:border-gray-200 xl:pr-0">
+                <div class="bg-white dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l lg:border-gray-200 xl:pr-0">
                     <div class="h-full pl-6 py-6 lg:w-72">
                         {/* <!-- Start right column area --> */}
                         <div class="h-full relative" >
