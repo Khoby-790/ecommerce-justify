@@ -92,7 +92,10 @@ const SelectedItem = () => {
             </div>
 
             <Modal show={showPhoneModal} setShow={setShowPhoneModal} size={35}>
-
+                <div className="bg-white flex flex-col py-4 px-4">
+                    <label htmlFor="phonenumber">Phone Number</label>
+                    <input type="text" className="border max-h-5 h-5 focus:outline-none " />
+                </div>
             </Modal>
 
         </Fragment>
