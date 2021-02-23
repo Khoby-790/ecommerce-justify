@@ -38,8 +38,8 @@ const Cart = () => {
                                         <div className=" mt-5" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
                                         </div>
 
-                                        <div className="mt-6 relative  w-78">
-                                            <div className="flex w-full fixed cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
+                                        <div className="absolute">
+                                            <div className="flex w-full relative  cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
                                                 <div className="flex px-4 items-center justify-center">
                                                     <BiCart className="text-white dark:text-gray-900" />
                                                     <h2 className="ml-6">Add to cart</h2>
