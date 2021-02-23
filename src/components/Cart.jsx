@@ -14,6 +14,14 @@ const Cart = () => {
                             {!item && <div className="h-60 w-60">
                                 <EmptyCartIcon />
                             </div>}
+
+                            {item &&
+                                <Fragment>
+                                    <div className="h-42 w-full">
+                                        <img src={item.original_picture_url} className="h-full w-full" alt="" />
+                                    </div>
+                                </Fragment>
+                            }
                         </div>
                     </div>
                     {/* <!-- End right column area --> */}
