@@ -18,7 +18,8 @@ const initialState = {
     sneakers: sneakers,
     selectedSneaker: null,
     categories: _categories.map(el => ({ label: el, value: el })),
-    selectedCategories: _categories
+    selectedCategories: _categories,
+    cart: []
 };
 
 
