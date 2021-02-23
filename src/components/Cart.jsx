@@ -37,8 +37,8 @@ const Cart = () => {
 
                                         <div className="mt-11">
                                             <div className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
-                                                <div className="flex">
-                                                    <BiCart />
+                                                <div className="flex px-4 items-center justify-center">
+                                                    <BiCart className="text-white dark:text-gray-900" />
                                                     <h2 className="ml-6">Add to cart</h2>
                                                 </div>
                                                 <div>
