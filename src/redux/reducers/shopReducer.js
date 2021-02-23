@@ -29,7 +29,13 @@ function shopReducer(state = initialState, action) {
         case "SelectSneaker":
             return {
                 ...state,
-                selectedSneaker: action.payload
+                selectedSneaker: { ...action.payload, qty: 1 }
+            }
+
+        case "removeSneaker":
+            return {
+                ...state,
+                cart: [...state.cart.filter(el => el.id !== action.payload.id)]
             }
         case "SelectCategory":
             const hasIt = state.selectedCategories.find(el => el === action.payload)
