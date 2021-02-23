@@ -3,12 +3,14 @@ import './App.css';
 import { Fragment } from 'react';
 import Shop from './layout/Shop';
 import Todo from './todo/Todo';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
   return (
-    <Fragment>
+    <Provider store={store}>
       <Shop />
-    </Fragment>
+    </Provider>
   );
 }
 
