@@ -8,7 +8,7 @@ const ShopContent = () => {
         <Fragment>
             <div class="flex-grow w-full lg:flex">
                 {/* <!-- Left sidebar & main wrapper --> */}
-                <div class="flex-1 min-w-0 bg-white xl:flex">
+                <div class="flex-1 min-w-0 bg-white dark:bg-gray-800 xl:flex">
                     <FlitersPane />
                     <ItemsListing />
                 </div>
