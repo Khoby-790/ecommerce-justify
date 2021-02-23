@@ -44,7 +44,7 @@ const categoriesListing = [
 
 const FlitersPane = () => {
     const dispatch = useDispatch()
-    const categories = useSelector(state => state.categories)
+    const { categories, selectedCategories } = useSelector(state => state)
 
     const onCategoryClicked = value => {
         // alert(value)
@@ -61,7 +61,7 @@ const FlitersPane = () => {
                     <div class="h-full relative" >
                         <div class="absolute inset-0">
                             <FliterItemDropDown name="Shipped From" list={shippedFromList} />
-                            <FliterItemDropDown onItemClicked={onCategoryClicked} name="Categories" list={categories} />
+                            <FliterItemDropDown onItemClicked={onCategoryClicked} selectedValues={selectedCategories} name="Categories" list={categories} />
                         </div>
                     </div>
                 </div>
