@@ -6,7 +6,7 @@ import sneakers from '../assets/shops.json'
 
 function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
-  }
+}
 
 const sortList = ["Prize", "In Stock", "Size", "Color"];
 
@@ -19,12 +19,13 @@ const ItemsListing = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        const _categories = [];
+        let _categories = [];
         for (let i = 0; i < allCategories.length; i++) {
             const category = allCategories[i];
-            _categories.concat(category);
-            console.log(_categories)
+            _categories = [..._categories, ...category]
         }
+        _categories = _categories.filter(onlyUnique)
+        console.log(_categories)
     }, [])
 
     return (
