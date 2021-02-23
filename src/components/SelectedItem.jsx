@@ -15,6 +15,12 @@ const SelectedItem = () => {
         })
     }
 
+    const cancel = () => {
+        dispatch({
+            type: "unselectSneaker"
+        })
+    }
+
     const message = `hey i just found the ${item?.name} and you wont believe it, it goes for a cool ${item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
 
     return !item ? null : (
@@ -31,7 +37,7 @@ const SelectedItem = () => {
                                             <ImWhatsapp className="mr-3" />
                                             share item
                                         </a>
-                                        <button className="text-red-600 outline-none focus:outline-none">Cancel</button>
+                                        <button onClick={cancel} className="text-red-600 outline-none focus:outline-none">Cancel</button>
                                     </div>
                                     <div className="flex-1 pb-3 overflow-scroll">
                                         <div className="h-46">
