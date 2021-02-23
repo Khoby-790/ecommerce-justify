@@ -34,7 +34,7 @@ const SelectedItem = () => {
                                             <h3 className="font-bold">Select Size</h3>
                                             <div className="flex overflow-scroll mt-2">
                                                 {item.size_range?.map((size, sizeIndex) => (
-                                                    <div key={sizeIndex} className="h-11 w-11 px-4 dark:bg-white dark:text-gray-600 flex dark:border-gray-300 items-center rounded-md justify-center border mr-4 border-gray-800">{size}</div>
+                                                    <div key={sizeIndex} className="h-11 w-11 px-4 dark:bg-white bg-gray-900 text-white dark:text-gray-600 flex dark:border-gray-300 items-center rounded-md justify-center border mr-4 border-gray-800">{size}</div>
                                                 ))}
                                             </div>
                                         </div>
