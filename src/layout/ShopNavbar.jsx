@@ -12,7 +12,7 @@ const ShopNavbar = () => {
 
     return (
         <Fragment>
-            <nav class="flex-shrink-0 bg-white border-b border-gray-300">
+            <nav class="flex-shrink-0 bg-white dark:bg-gray-800 dark:border-white border-b border-gray-300">
                 <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
                     <div class="relative flex items-center justify-between h-16">
 
