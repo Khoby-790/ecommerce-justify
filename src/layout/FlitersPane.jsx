@@ -46,6 +46,10 @@ const FlitersPane = () => {
 
     const categories = useSelector(state => state.categories)
 
+    const onCategoryClicked = value => {
+        alert(value)
+    }
+
     return (
         <Fragment>
             <div class="border-b border-gray-200 dark:border-white xl:border-b-0 xl:flex-shrink-0 dark:bg-gray-800 xl:w-72 xl:border-r xl:border-gray-200 bg-white">
@@ -53,7 +57,7 @@ const FlitersPane = () => {
                     <div class="h-full relative" >
                         <div class="absolute inset-0">
                             <FliterItemDropDown name="Shipped From" list={shippedFromList} />
-                            <FliterItemDropDown name="Categories" list={categories} />
+                            <FliterItemDropDown onItemClicked={onCategoryClicked} name="Categories" list={categories} />
                         </div>
                     </div>
                 </div>
