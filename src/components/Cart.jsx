@@ -29,7 +29,7 @@ const Cart = () => {
                                             <h3>Select Size</h3>
                                             <div className="flex overflow-scroll">
                                                 {item.size_range?.map((size, sizeIndex) => (
-                                                    <div className="h-11 w-16 flex items-center justify-center border mx-4 border-gray-800">{size}</div>
+                                                    <div className="h-11 w-11 px-4 flex items-center justify-center border mr-4 border-gray-800">{size}</div>
                                                 ))}
                                             </div>
                                         </div>
