@@ -27,6 +27,8 @@ const SelectedItem = () => {
 
     const share = () => {
         window.open(`https://wa.me/+233${number.slice(-9)}/?text=${message}`, "blank")
+
+        setShowPhoneModal(false);
     }
 
     const message = `hey i just found the ${item?.name} and you wont believe it, it goes for a cool ${item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
