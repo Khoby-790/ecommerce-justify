@@ -51,7 +51,7 @@ export default ItemsListing
 const Item = ({ item }) => {
     const categories = useSelector(state => state.selectedCategories || [])
 
-    const categorySelected = categories.some(e => item?.categories?.includes(e))
+    const categorySelected = categories.some(e => item?.category?.includes(e))
     console.log("State:::", categorySelected)
 
     return categories.some(e => item?.categories?.includes(e)) ? (
