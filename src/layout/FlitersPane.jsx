@@ -50,7 +50,7 @@ const FlitersPane = () => {
             _categories = [..._categories, ...category]
         }
         _categories = _categories.filter(onlyUnique)
-        setCategories((prev) => [...prev, ...categories.map(el => ({ label: el, value: el }))])
+        setCategories((prev) => [...prev, ..._categories.map(el => ({ label: el, value: el }))])
     }, [])
 
     return (
