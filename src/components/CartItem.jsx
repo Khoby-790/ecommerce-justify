@@ -1,7 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 
 const CartItem = ({ cartItem }) => {
+    const [qty, setQty] = useState(0);
     return (
         <Fragment>
             <div className="flex mt-2 justify-between">
@@ -16,7 +17,9 @@ const CartItem = ({ cartItem }) => {
                             <div className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-l-lg max-h-6 w-11 h-full px-2">
                                 <FaPlus className="dark:text-white" />
                             </div>
-                            <div className="border flex items-center justify-center border-gray-800 dark:border-white max-h-6 w-6 h-full px-2"></div>
+                            <div className="border flex items-center justify-center border-gray-800 dark:border-white max-h-6 w-6 h-full px-2">
+                                {qty}
+                            </div>
                             <div className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-r-lg max-h-6 w-11 h-full px-2">
                                 <FaMinus className="dark:text-white" />
                             </div>
