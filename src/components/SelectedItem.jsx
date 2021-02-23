@@ -13,6 +13,8 @@ const SelectedItem = () => {
         })
     }
 
+    const message = `hey i just found the ${item.name} and you wont believe it, it goes for a cool ${item.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
+
     return !item ? null : (
         <Fragment>
             <div class="bg-white dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
@@ -23,7 +25,7 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">
-                                        <a target="blank" href="https://wa.me/0274488676/?text=urlencodedtext" className="text-green-600 outline-none focus:outline-none">
+                                        <a target="blank" href={`https://wa.me/0274488676/?text=${message}`} className="text-green-600 outline-none focus:outline-none">
                                             share item
                                         </a>
                                         <button className="text-red-600 outline-none focus:outline-none">Cancel</button>
