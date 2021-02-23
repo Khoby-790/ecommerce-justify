@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import EmptyCartIcon from '../components/EmptyCartIcon'
 import ItemsListing from '../components/ItemsListing'
 import FlitersPane from './FlitersPane'
 
@@ -15,7 +16,9 @@ const ShopContent = () => {
                         <div class="h-full pl-6 py-6 lg:w-72">
                             {/* <!-- Start right column area --> */}
                             <div class="h-full relative" >
-                                <div class="absolute inset-0  rounded-lg"></div>
+                                <div class="absolute inset-0 rounded-lg">
+                                    <EmptyCartIcon />
+                                </div>
                             </div>
                             {/* <!-- End right column area --> */}
                         </div>
