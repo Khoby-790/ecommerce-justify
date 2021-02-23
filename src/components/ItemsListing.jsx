@@ -48,14 +48,17 @@ export default ItemsListing
 const Item = ({ item }) => {
 
     return (
-        <div className="h-80 mr-3 ml-2 mb-2 w-72 border border-gray-300 rounded-lg overflow-hidden">
+        <div className="h-auto mr-3 ml-2 mb-2 w-72 border border-gray-300 rounded-lg overflow-hidden">
             <div className="absolute h-10 w-2 bg-gray-700 mt-4 -ml-2  "></div>
             <div className="p-3 ">
                 <h4 className="font-light text-gray-400">{item.brand_name}</h4>
                 <h1>{item.designer}</h1>
 
-                <div className="h-56 w-full ">
+                <div className="h-46 w-full ">
                     <img src={item.original_picture_url} className="h-full w-full" alt=""/>
+                </div>
+                <div>
+                    <h3 className="font-thin text-lg text-gray-400">Price</h3>
                 </div>
             </div>
         </div>
