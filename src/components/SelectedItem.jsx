@@ -23,6 +23,9 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">
+                                        <a target="blank" href="https://wa.me/0274488676/?text=urlencodedtext" className="text-green-600 outline-none focus:outline-none">
+                                            share item
+                                        </a>
                                         <button className="text-red-600 outline-none focus:outline-none">Cancel</button>
                                     </div>
                                     <div className="flex-1 pb-3 overflow-scroll">
