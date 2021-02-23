@@ -9,11 +9,18 @@ const sortList = ["Prize", "In Stock", "Size", "Color"];
 
 const allCategories = sneakers.map(el => el.category);
 
+
 const ItemsListing = () => {
 
     const [items] = useState(sneakers);
+    const [categories, setCategories] = useState([])
 
     useEffect(() => {
+        const _categories = [];
+        for (let i = 0; i < allCategories.length; i++) {
+            const category = allCategories[i];
+            _categories.concat(category);
+        }
         console.log(allCategories)
     }, [])
 
