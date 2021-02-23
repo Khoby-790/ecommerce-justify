@@ -4,6 +4,9 @@ import faker from 'faker';
 
 import sneakers from '../assets/shops.json'
 
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+  }
 
 const sortList = ["Prize", "In Stock", "Size", "Color"];
 
@@ -21,7 +24,7 @@ const ItemsListing = () => {
             const category = allCategories[i];
             _categories.concat(category);
         }
-        console.log(allCategories)
+        console.log(_categories)
     }, [])
 
     return (
