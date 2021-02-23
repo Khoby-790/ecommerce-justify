@@ -54,8 +54,8 @@ const Item = ({ item }) => {
                 <h4 className="font-light text-gray-400">{item.brand_name}</h4>
                 <h1>{item.designer}</h1>
 
-                <div className="h-56 w-full bg-gray-400">
-                    <img src={item.image} className="h-full w-full" alt=""/>
+                <div className="h-56 w-full ">
+                    <img src={item.original_picture_url} className="h-full w-full" alt=""/>
                 </div>
             </div>
         </div>
