@@ -34,11 +34,11 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">
-                                        {/* <a target="blank" href={`https://wa.me/0274488676/?text=${message}`} className="text-green-600 flex items-center outline-none focus:outline-none">
+                                        <a target="blank" href={`https://wa.me/+233274488676/?text=${message}`} className="text-green-600 flex items-center outline-none focus:outline-none">
                                             <ImWhatsapp className="mr-3" />
                                             share item
-                                        </a> */}
-                                        <WhatsappShareButton title="Share item" />
+                                        </a>
+                                        {/* <WhatsappShareButton title="Share item" /> */}
                                         <button onClick={cancel} className="text-red-600 outline-none focus:outline-none">Cancel</button>
                                     </div>
                                     <div className="flex-1 pb-3 overflow-scroll">
