@@ -22,7 +22,7 @@ const Cart = () => {
                             <h3 className="font-light text-2xl">Your cart</h3>
                             <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
                             {cart.map((cartItem, cartIndex) => (
-                                <CartItem key={cartIndex} cartItem={cartItem} />
+                                <CartItem key={cartIndex} index={cartIndex} cartItem={cartItem} />
                             ))}
 
                         </div>
