@@ -31,7 +31,7 @@ const ItemsListing = () => {
 
                             <div className="flex-1 grid grid-cols-2">
 
-                                {items.filter(el => el?.categories?.includes(categories)).map((item, key) => <Item key={key} item={item} />)}
+                                {items.filter(el => el?.categories?.some(r => categories.includes(r)).map((item, key) => <Item key={key} item={item} />)}
 
                             </div>
 
