@@ -23,7 +23,7 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex-1 pb-3 overflow-scroll">
-                                        <div className="h-40">
+                                        <div className="h-46">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
                                         <div className="flex flex-col justify-center">
