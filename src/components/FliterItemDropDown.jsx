@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 import { Transition } from '.';
 
-const FliterItemDropDown = ({ name, list = [], onItemClicked }) => {
+const FliterItemDropDown = ({ name, list = [], onItemClicked, selectedValues = [] }) => {
     const [showDetails, setShowDetails] = useState(false);
     return (
         <Fragment>
@@ -33,7 +33,7 @@ const FliterItemDropDown = ({ name, list = [], onItemClicked }) => {
                             {/* <!-- On: "bg-indigo-50 border-indigo-200 z-10", Off: "border-gray-200" --> */}
                             <div class="relative border dark:border-gray-500  py-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-1">
                                 <label class="flex items-center text-sm cursor-pointer">
-                                    <input onClick={() => { onItemClicked && onItemClicked(value) }} value={value} name="pricing_plan" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-gray-600 dark:text-white cursor-pointer dark:bg-white bg-gray-600 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0" />
+                                    <input checked={selectedValues.includes(value)} onClick={() => { onItemClicked && onItemClicked(value) }} value={value} name="pricing_plan" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-gray-600 dark:text-white cursor-pointer dark:bg-white bg-gray-600 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0" />
                                     <span class="ml-3 font-light dark:text-white text-gray-900">{label}</span>
                                 </label>
                             </div>
