@@ -29,6 +29,11 @@ const Cart = () => {
                                         <h3 className="font-light dark:text-gray-100 dark:font-bold text-2xl">Your cart</h3>
                                         <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
                                     </div>
+                                    <div className="flex justify-end">
+                                        <button className="text-green-600 outline-none focus:outline-none">
+                                            share link
+                                        </button>
+                                    </div>
                                 </div>
                                 <div className="flex-1 pb-4 overflow-scroll">
                                     {cart.map((cartItem, cartIndex) => (
