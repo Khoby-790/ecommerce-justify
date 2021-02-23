@@ -33,6 +33,12 @@ const Cart = () => {
                                                 ))}
                                             </div>
                                         </div>
+
+                                        <div className="mt-11">
+                                            <div className="flex w-full rounded-lg bg-gray-900 py-3">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </Fragment>
                             }
