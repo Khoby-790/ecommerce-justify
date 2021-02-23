@@ -9,7 +9,7 @@ const Cart = () => {
             <div class="bg-white dark:bg-gray-500  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-white lg:border-gray-200 xl:pr-0">
                 <div class="h-full px-6 py-6 lg:w-full">
                     {/* <!-- Start right column area --> */}
-                    <div class="h-full relative" >
+                    <div class="h-full relative overflow-scroll" >
                         <div class="absolute inset-0 rounded-lg">
                             {!item && <div className="h-60 w-60">
                                 <EmptyCartIcon />
@@ -21,8 +21,9 @@ const Cart = () => {
                                         <div className="h-auto">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
                                         </div>
-                                        <div className="flex justify-center">
-                                            <h2 className="font-bold text-2xl">{item.name}</h2>
+                                        <div className="flex flex-col justify-center">
+                                            <h2 className="font-bold text-2xl text-center">{item.name}</h2>
+                                            <h4>{item.designer}</h4>
                                         </div>
                                     </div>
                                 </Fragment>
