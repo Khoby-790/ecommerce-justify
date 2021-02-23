@@ -40,7 +40,7 @@ function shopReducer(state = initialState, action) {
             }
         case "decreaseQty":
             const _cart = state.cart;
-            _cart[action.payload] = { ..._cart[action.payload], qty: _cart[action.payload] + 1 }
+            _cart[action.payload] = { ..._cart[action.payload], qty: _cart[action.payload].qty - 1 }
             return {
                 ...state,
                 cart: _cart

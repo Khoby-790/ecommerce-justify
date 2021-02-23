@@ -16,7 +16,7 @@ const CartItem = ({ cartItem, index }) => {
 
     const decreaseQty = () => {
         dispatch({
-            type: "increaseQty",
+            type: "decreaseQty",
             payload: index
         })
     }
