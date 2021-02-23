@@ -22,6 +22,10 @@ const SelectedItem = () => {
         })
     }
 
+    const share = () => {
+        window.open(`https://wa.me/+233274488676/?text=${message}`, "blank")
+    }
+
     const message = `hey i just found the ${item?.name} and you wont believe it, it goes for a cool ${item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
 
     return !item ? null : (
@@ -34,7 +38,7 @@ const SelectedItem = () => {
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">
-                                        <a target="blank" href={`https://wa.me/+233274488676/?text=${message}`} className="text-green-600 flex items-center outline-none focus:outline-none">
+                                        <a target="blank" onClick={} className="text-green-600 flex items-center outline-none focus:outline-none">
                                             <ImWhatsapp className="mr-3" />
                                             share item
                                         </a>
