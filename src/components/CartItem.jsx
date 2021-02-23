@@ -44,7 +44,7 @@ const CartItem = ({ cartItem, index }) => {
                             <div onClick={increaseQty} className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-l-lg max-h-6 w-11 h-full px-2">
                                 <FaPlus className="dark:text-white" />
                             </div>
-                            <div className="border flex items-center justify-center border-gray-800 dark:border-white max-h-6 w-6 h-full px-2">
+                            <div className="border dark:text-gray-100 flex items-center justify-center border-gray-800 dark:border-white max-h-6 w-6 h-full px-2">
                                 {cartItem.qty}
                             </div>
                             <div onClick={decreaseQty} className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-r-lg max-h-6 w-11 h-full px-2">
