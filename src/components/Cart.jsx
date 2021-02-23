@@ -17,8 +17,10 @@ const Cart = () => {
 
                             {item &&
                                 <Fragment>
-                                    <div className="h-42 w-full">
-                                        <img src={item.original_picture_url} className="h-full w-full" alt="" />
+                                    <div className="flex">
+                                        <div className="h-42 w-full bg-red-400 items-center">
+                                            <img src={item.original_picture_url} className="h-full w-full" alt="" />
+                                        </div>
                                     </div>
                                 </Fragment>
                             }
