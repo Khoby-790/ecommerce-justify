@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Cart from '../components/Cart'
 import EmptyCartIcon from '../components/EmptyCartIcon'
 import ItemsListing from '../components/ItemsListing'
 import FlitersPane from './FlitersPane'
@@ -12,7 +13,7 @@ const ShopContent = () => {
                     <FlitersPane />
                     <ItemsListing />
                 </div>
-                
+                <Cart />
             </div>
 
         </Fragment>
