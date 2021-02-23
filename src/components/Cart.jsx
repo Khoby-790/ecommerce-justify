@@ -35,7 +35,10 @@ const Cart = () => {
                                             </div>
                                         </div>
 
-                                        <div className="mt-11">
+                                        <div className=" mt-5" dangerouslySetInnerHTML={{ __html: item?.story_html }}>
+                                        </div>
+
+                                        <div className="mt-6">
                                             <div className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
                                                 <div className="flex px-4 items-center justify-center">
                                                     <BiCart className="text-white dark:text-gray-900" />
