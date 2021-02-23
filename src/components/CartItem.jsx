@@ -37,7 +37,7 @@ const CartItem = ({ cartItem, index }) => {
                     <img src={cartItem?.original_picture_url} alt="" />
                 </div>
                 <div className="flex-1">
-                    <h3 className="font-bold">{cartItem.name}</h3>
+                    <h3 className="font-bold dark:text-gray-100">{cartItem.name}</h3>
                     <p className="dark:text-gray-400">{cartItem?.designer || "Community"}</p>
                     <div className="flex mt-4 pr-4 justify-between">
                         <div className="flex">
