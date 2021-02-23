@@ -22,6 +22,9 @@ const SelectedItem = () => {
                         <div class="absolute inset-0 rounded-lg">
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
+                                    <div className="flex justify-end">
+                                        <button className="text-red-600">Cancel</button>
+                                    </div>
                                     <div className="flex-1 pb-3 overflow-scroll">
                                         <div className="h-46">
                                             <img src={item.original_picture_url} className="h-full w-full" alt="" />
