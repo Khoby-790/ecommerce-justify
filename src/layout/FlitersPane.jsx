@@ -23,25 +23,6 @@ const shippedFromList = [
 
 
 
-const categoriesListing = [
-    {
-        label: "Flip Flops",
-        value: "flipflops"
-    },
-    {
-        label: "Sneaker",
-        value: "sneaker"
-    },
-    {
-        label: "Lace-up Shoes",
-        value: "laceupshoes"
-    },
-    {
-        label: "Shoe Accessories",
-        value: "shoeaccessories"
-    }
-]
-
 const FlitersPane = () => {
     const dispatch = useDispatch()
     const { categories, selectedCategories } = useSelector(state => state)
