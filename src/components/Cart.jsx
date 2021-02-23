@@ -32,11 +32,11 @@ const Cart = () => {
                                         <div className="flex mt-4 pr-4 justify-between">
                                             <div className="flex">
                                                 <div className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-l-lg max-h-6 w-11 h-full px-2">
-                                                    <FaPlus />
+                                                    <FaPlus className="dark:text-white" />
                                                 </div>
                                                 <div className="border flex items-center justify-center border-gray-800 dark:border-white max-h-6 w-6 h-full px-2"></div>
                                                 <div className="border cursor-pointer flex items-center justify-center border-gray-800 dark:border-white rounded-r-lg max-h-6 w-11 h-full px-2">
-                                                    <FaMinus />
+                                                    <FaMinus className="dark:text-white" />
                                                 </div>
                                             </div>
                                             <div className="flex">
