@@ -28,7 +28,7 @@ const Profile = () => {
                 {!auth && (
                     <div className="dark:text-white font-bold">
                         <span onClick={() => setShowLogin(true)} className="mr-2 cursor-pointer">Login</span>
-                        <span className="cursor-pointer">Register</span>
+                        <span onClick={() => setShowRegister(true)} className="cursor-pointer">Register</span>
                     </div>
                 )}
 
@@ -77,19 +77,19 @@ const Profile = () => {
                 </div>
             </Modal>
 
-            <Modal show={showLogin} setShow={setShowLogin}>
+            <Modal show={showRegister} setShow={setShowRegister}>
                 <div className="py-4 px-5 bg-white">
                     <div className="flex flex-col">
                         <label htmlFor="">Name</label>
-                        <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input type="text" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Email</label>
-                        <input type="email" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input type="email" placeholder="eg. johdoe@mail.com" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Phone</label>
-                        <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input type="text" placeholder="eg. 02744855686" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex mb-2 flex-col">
                         <label htmlFor="">Password</label>
