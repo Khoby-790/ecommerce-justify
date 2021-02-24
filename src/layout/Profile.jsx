@@ -83,6 +83,10 @@ const Profile = () => {
 
             <Modal show={showRegister} setShow={setShowRegister}>
                 <div className="py-4 px-5 bg-white">
+                    <div className="mb-3">
+                        <h3 className="text-gray-800 text-2xl font-medium">Register</h3>
+                        <p>Fill out the form to make your lofe easier on the platform</p>
+                    </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Name</label>
                         <input type="text" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
