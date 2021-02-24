@@ -75,6 +75,11 @@ function shopReducer(state = initialState, action) {
                 ...state,
                 auth: action.payload
             }
+        case "signOut":
+            return {
+                ...state,
+                auth: null
+            }
         default:
             return state;
     }
