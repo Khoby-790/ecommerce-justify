@@ -6,6 +6,7 @@ import { Transition } from '../components'
 import Modal from '../components/Modal';
 import { LOGIN_QUERY } from '../graphql/queries';
 import { useOutsideClick } from '../hooks';
+import { useDispatch } from 'react-redux'
 
 const Profile = () => {
     const profileMenuRef = useRef(null);
@@ -18,7 +19,7 @@ const Profile = () => {
     const [showRegister, setShowRegister] = useState(false);
     const [username, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    const dispatch = useDispatch();
     const [login, { loading }] = useMutation(LOGIN_QUERY);
 
     const onLoginClicked = () => {
@@ -27,7 +28,12 @@ const Profile = () => {
             variables: {
                 input: { username, password }
             }
-        }).then(res => { })
+        }).then(({ authenticate }) => {
+            dispatch({
+                type: "authenticateUser",
+                payload: authenticate?.user
+            })
+        })
             .catch(err => { })
     }
     const onRegisterClicked = () => { }
