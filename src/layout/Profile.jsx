@@ -26,7 +26,7 @@ const Profile = () => {
                 </div>}
                 {!auth && (
                     <div className="dark:text-white font-bold">
-                        <span className="mr-2 cursor-pointer">Login</span>
+                        <span onClick={() => setShowLogin(true)} className="mr-2 cursor-pointer">Login</span>
                         <span className="cursor-pointer">Register</span>
                     </div>
                 )}
@@ -51,8 +51,8 @@ const Profile = () => {
             </div>
 
 
-            <Modal>
-
+            <Modal show={showLogin} setShow={setShowLogin}>
+                <div className="py-4 bg-white"></div>
             </Modal>
 
 
