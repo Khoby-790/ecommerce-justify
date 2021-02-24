@@ -22,8 +22,9 @@ const Profile = () => {
                     </button>
                 </div>}
                 {!auth && (
-                    <div className="text-white">
-                        <span>Login</span>
+                    <div className="dark:text-white font-bold">
+                        <span className="mr-2 cursor-pointer">Login</span>
+                        <span className="cursor-pointer">Register</span>
                     </div>
                 )}
 
