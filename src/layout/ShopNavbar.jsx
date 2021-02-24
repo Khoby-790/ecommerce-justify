@@ -3,15 +3,10 @@ import React, { Fragment, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Transition } from '../components';
 import Cart from '../components/Cart';
-import { useOutsideClick } from '../hooks';
 import useDarkMode from '../hooks/useDarkMode';
+import Profile from './Profile';
 
 const ShopNavbar = () => {
-    const profileMenuRef = useRef(null);
-    const [showProfileMenu, setShowProfileMenu] = useState(false);
-    useOutsideClick(profileMenuRef, () => {
-        setShowProfileMenu(false)
-    })
 
     const cart = useSelector(state => state.cart)
 
@@ -62,7 +57,7 @@ const ShopNavbar = () => {
 
                                 </div>
                                 {/* <!-- Profile dropdown --> */}
-
+                                <Profile />
                                 <div onClick={() => setTheme(theme)} className="relative h-13 w-13 cursor-pointer flex justify-center items-center ml-3 rounded-full">
                                     {theme === "dark" ?
                                         <svg className="h-6 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

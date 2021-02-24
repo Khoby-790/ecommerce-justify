@@ -1,9 +1,12 @@
 import React, { Fragment, useState, useRef } from 'react'
 import { Transition } from '../components'
+import { useOutsideClick } from '../hooks';
 
 const Profile = () => {
     const profileMenuRef = useRef(null);
-
+    useOutsideClick(profileMenuRef, () => {
+        setShowProfileMenu(false)
+    })
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     return (
         <Fragment>
