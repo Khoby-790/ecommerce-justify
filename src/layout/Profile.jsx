@@ -7,6 +7,7 @@ import Modal from '../components/Modal';
 import { LOGIN_QUERY } from '../graphql/queries';
 import { useOutsideClick } from '../hooks';
 import { useDispatch } from 'react-redux'
+import { notification } from 'antd';
 
 const Profile = () => {
     const profileMenuRef = useRef(null);
@@ -36,7 +37,9 @@ const Profile = () => {
             })
             setShowLogin(false)
         })
-            .catch(err => { })
+            .catch(err => {
+                notification.error(err.message)
+            })
     }
     const onRegisterClicked = () => { }
 
