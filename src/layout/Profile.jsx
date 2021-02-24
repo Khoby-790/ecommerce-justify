@@ -54,8 +54,9 @@ const Profile = () => {
 
             <Modal show={showLogin} setShow={setShowLogin}>
                 <div className="py-4 px-5 bg-white">
-                    <div className="">
+                    <div className="mb-3">
                         <h3 className="text-gray-800 text-2xl font-medium">Login</h3>
+                        <p>Provide your valid details to be able to access your account</p>
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Username</label>
