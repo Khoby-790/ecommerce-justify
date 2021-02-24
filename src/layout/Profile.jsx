@@ -54,6 +54,9 @@ const Profile = () => {
 
             <Modal show={showLogin} setShow={setShowLogin}>
                 <div className="py-4 px-5 bg-white">
+                    <div className="">
+                        <h3 className="text-gray-800 text-2xl font-medium">Login</h3>
+                    </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Username</label>
                         <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
