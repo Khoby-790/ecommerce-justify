@@ -28,11 +28,13 @@ const Profile = () => {
             variables: {
                 input: { username, password }
             }
-        }).then(({ authenticate }) => {
+        }).then(({ data: { authenticate } }) => {
+            console.log(authenticate)
             dispatch({
                 type: "authenticateUser",
                 payload: authenticate?.user
             })
+            setShowLogin(false)
         })
             .catch(err => { })
     }
