@@ -80,11 +80,23 @@ const Profile = () => {
             <Modal show={showLogin} setShow={setShowLogin}>
                 <div className="py-4 px-5 bg-white">
                     <div className="flex flex-col">
-                        <label htmlFor="">Username</label>
+                        <label htmlFor="">Name</label>
+                        <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="">Email</label>
+                        <input type="email" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="">Phone</label>
                         <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex mb-2 flex-col">
                         <label htmlFor="">Password</label>
+                        <input type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                    </div>
+                    <div className="flex mb-2 flex-col">
+                        <label htmlFor="">Confirm Password</label>
                         <input type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
