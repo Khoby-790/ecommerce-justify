@@ -62,7 +62,7 @@ const Profile = () => {
                         <input type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
-                        <button className="bg-green-700 text-white py-3">Sign in</button>
+                        <button className="bg-green-700 rounded-md text-white py-3">Sign in</button>
                     </div>
                 </div>
             </Modal>
