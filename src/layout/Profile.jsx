@@ -95,7 +95,7 @@ const Profile = () => {
                         </span>
                     </div>
                     <div className="flex flex-col">
-                        <button onClick={onLoginClicked} className="bg-green-700 rounded-md text-white py-3">Sign in</button>
+                        <button disabled={loading} onClick={onLoginClicked} className="bg-green-700 rounded-md text-white py-3">Sign in</button>
                     </div>
                 </div>
             </Modal>
