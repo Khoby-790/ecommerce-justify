@@ -69,6 +69,12 @@ function shopReducer(state = initialState, action) {
                 cart: [...state.cart.filter(item => item.id !== state.selectedSneaker.id), state.selectedSneaker],
                 selectedSneaker: null
             }
+
+        case "authenticateUser":
+            return {
+                ...state,
+                auth: action.payload
+            }
         default:
             return state;
     }
