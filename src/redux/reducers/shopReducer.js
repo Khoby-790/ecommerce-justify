@@ -20,7 +20,8 @@ const initialState = {
     categories: _categories.map(el => ({ label: el, value: el })),
     selectedCategories: _categories,
     cart: [],
-    showCart: false
+    showCart: false,
+    auth: null
 };
 
 
