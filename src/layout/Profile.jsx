@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { useMutation } from '@apollo/client';
 import React, { Fragment, useState, useRef } from 'react'
 import { useSelector } from 'react-redux';
 import { Transition } from '../components'
 import Modal from '../components/Modal';
+import { LOGIN_QUERY } from '../graphql/queries';
 import { useOutsideClick } from '../hooks';
 
 const Profile = () => {
@@ -14,6 +16,22 @@ const Profile = () => {
     const [showLogin, setShowLogin] = useState(false);
     const [rememberme, setRememberme] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
+    const [username, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const [login, { loading }] = useMutation(LOGIN_QUERY);
+
+    const onLoginClicked = () => {
+        if (!username || !password) return;
+        login({
+            variables: {
+                input: { username, password }
+            }
+        }).then(res => { })
+            .catch(err => { })
+    }
+    const onRegisterClicked = () => { }
+
     const auth = useSelector(state => state.auth)
     return (
         <Fragment>
@@ -77,7 +95,7 @@ const Profile = () => {
                         </span>
                     </div>
                     <div className="flex flex-col">
-                        <button className="bg-green-700 rounded-md text-white py-3">Sign in</button>
+                        <button onClick={onLoginClicked} className="bg-green-700 rounded-md text-white py-3">Sign in</button>
                     </div>
                 </div>
             </Modal>
