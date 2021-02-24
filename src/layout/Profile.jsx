@@ -55,11 +55,11 @@ const Profile = () => {
                 <div className="py-4 px-5 bg-white">
                     <div className="flex flex-col">
                         <label htmlFor="">Username</label>
-                        <input type="text" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
-                        <label htmlFor="">Username</label>
-                        <input type="text" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <label htmlFor="">Password</label>
+                        <input type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                 </div>
             </Modal>
