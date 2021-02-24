@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useRef } from 'react'
 import { useSelector } from 'react-redux';
 import { Transition } from '../components'
+import Modal from '../components/Modal';
 import { useOutsideClick } from '../hooks';
 
 const Profile = () => {
@@ -9,6 +10,8 @@ const Profile = () => {
         setShowProfileMenu(false)
     })
     const [showProfileMenu, setShowProfileMenu] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
+    const [showRegister, setShowRegister] = useState(false);
     const auth = useSelector(state => state.auth)
     return (
         <Fragment>
@@ -46,6 +49,13 @@ const Profile = () => {
 
 
             </div>
+
+
+            <Modal>
+
+            </Modal>
+
+
         </Fragment>
     )
 }
