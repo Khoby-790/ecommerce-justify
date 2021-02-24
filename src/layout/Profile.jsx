@@ -57,9 +57,12 @@ const Profile = () => {
                         <label htmlFor="">Username</label>
                         <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex mb-2 flex-col">
                         <label htmlFor="">Password</label>
                         <input type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                    </div>
+                    <div className="flex flex-col">
+                        <button className="bg-green-700 text-white py-3">Sign in</button>
                     </div>
                 </div>
             </Modal>
