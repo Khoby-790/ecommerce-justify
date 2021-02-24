@@ -71,7 +71,7 @@ const Profile = () => {
             </div>
 
 
-            <Modal show={showLogin} setShow={setShowLogin}>
+            <Modal show={showLogin} canClose={!loading} setShow={setShowLogin}>
                 <div className="py-4 px-5 bg-white">
                     <div className="mb-3">
                         <h3 className="text-gray-800 text-2xl font-medium">Login</h3>
@@ -79,11 +79,11 @@ const Profile = () => {
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Username</label>
-                        <input type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input value={username} onChange={e => setEmail(e.target.value)} type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex mb-2 flex-col">
                         <label htmlFor="">Password</label>
-                        <input type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div class="flex mb-3 items-center">
                         <button onClick={() => setRememberme(prev => !prev)} type="button" class={`${rememberme ? "bg-green-700" : "bg-gray-200"} relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`} aria-pressed="false" aria-labelledby="annual-billing-label">
