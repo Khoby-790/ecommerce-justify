@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useRef } from 'react'
+import { useSelector } from 'react-redux';
 import { Transition } from '../components'
 import { useOutsideClick } from '../hooks';
 
@@ -8,18 +9,23 @@ const Profile = () => {
         setShowProfileMenu(false)
     })
     const [showProfileMenu, setShowProfileMenu] = useState(false);
+    const auth = useSelector(state => state.auth)
     return (
         <Fragment>
             <div class="ml-4 relative flex-shrink-0">
-                <div onClick={() => setShowProfileMenu(c => !c)}>
+                {auth && <div onClick={() => setShowProfileMenu(c => !c)}>
                     <button class="bg-yellow-600 dark:bg-green-400 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white" id="user-menu" aria-haspopup="true">
                         <span class="sr-only">Open user menu</span>
                         <div className=" h-10 w-10 flex items-center justify-center rounded-full">
                             <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80" alt="" />
                         </div>
                     </button>
-                </div>
-
+                </div>}
+                {!auth && (
+                    <div className="text-white">
+                        <span>Login</span>
+                    </div>
+                )}
 
                 <Transition
                     show={showProfileMenu}
