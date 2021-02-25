@@ -61,6 +61,7 @@ const Profile = () => {
                         <div className=" h-10 w-10 flex items-center justify-center rounded-full">
                             <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80" alt="" />
                         </div>
+                        <span>{"Name"}</span>
                     </button>
                 </div>}
                 {!auth && (
