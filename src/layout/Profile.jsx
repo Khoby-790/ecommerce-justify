@@ -50,7 +50,7 @@ const Profile = () => {
             })
     }
     const onRegisterClicked = values => {
-        alert("Hello")
+        alert(JSON.stringify(values))
     }
 
     const onSignOutClicked = () => {
@@ -143,19 +143,19 @@ const Profile = () => {
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Email</label>
-                        <input ref={register({ required: true })} type="email" placeholder="eg. johdoe@mail.com" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input name="email" ref={register({ required: true })} type="email" placeholder="eg. johdoe@mail.com" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Phone</label>
-                        <input ref={register({ required: true })} type="text" placeholder="eg. 02744855686" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input name="phone" ref={register({ required: true })} type="text" placeholder="eg. 02744855686" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex mb-2 flex-col">
                         <label htmlFor="">Password</label>
-                        <input ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input name="password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex mb-2 flex-col">
                         <label htmlFor="">Confirm Password</label>
-                        <input ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input name="confirm_password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
                         <button type="submit" className="bg-green-700 rounded-md text-white py-3">Sign in</button>
