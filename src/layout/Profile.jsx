@@ -130,7 +130,7 @@ const Profile = () => {
             </Modal>
 
             <Modal show={showRegister} setShow={setShowRegister}>
-                <div className="py-4 px-5 bg-white">
+                <form className="py-4 px-5 bg-white">
                     <div className="mb-3">
                         <h3 className="text-gray-800 text-2xl font-medium">Register</h3>
                         <p>Fill out the form to make your lofe easier on the platform</p>
@@ -156,9 +156,9 @@ const Profile = () => {
                         <input type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
-                        <button className="bg-green-700 rounded-md text-white py-3">Sign in</button>
+                        <button type="submit" className="bg-green-700 rounded-md text-white py-3">Sign in</button>
                     </div>
-                </div>
+                </form>
             </Modal>
 
 
