@@ -49,7 +49,9 @@ const Profile = () => {
                 })
             })
     }
-    const onRegisterClicked = values => { }
+    const onRegisterClicked = values => {
+        alert("Hello")
+    }
 
     const onSignOutClicked = () => {
         dispatch({ type: "signOut" })
@@ -137,7 +139,7 @@ const Profile = () => {
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Name</label>
-                        <input ref={register({ required: true })} type="text" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        <input name="name" ref={register({ required: true })} type="text" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex flex-col">
                         <label htmlFor="">Email</label>
