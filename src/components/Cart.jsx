@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CartItem from './CartItem';
 import EmptyCartIcon from './EmptyCartIcon'
@@ -19,7 +19,14 @@ const defaultOptions = {
 const Cart = () => {
     const { selectedSneaker: item, cart } = useSelector(state => state);
     const [itemsOrdered, setItemsOrdered] = useState(false);
-    const sumOfCart = cart.reduce((acc, curr) => acc + (curr.qty * curr.retail_price_cents), 0)
+    const sumOfCart = cart.reduce((acc, curr) => acc + (curr.qty * curr.retail_price_cents), 0);
+
+    useEffect(() => {
+        if (itemsOrdered) {
+            setTimeout(() => setItemsOrdered(false), 3000)
+        }
+    }, [itemsOrdered])
+
     return item ? null : (
         <Fragment>
             {itemsOrdered ?
