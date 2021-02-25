@@ -35,7 +35,7 @@ const Cart = () => {
         <Fragment>
             {itemsOrdered ?
                 <div className="bg-white dark:bg-gray-800 sm:hidden lg:block   max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
-                    <div className="h-full flex flex-col justify-center items-center">
+                    <div className="h-full px-5 flex flex-col justify-center items-center">
                         <Lottie options={defaultOptions}
                             height={400}
                             width={400}
