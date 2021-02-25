@@ -4,7 +4,7 @@ import CartItem from './CartItem';
 import EmptyCartIcon from './EmptyCartIcon'
 import { BiCart } from 'react-icons/bi';
 import Lottie from 'react-lottie';
-import * as successAnimationData from '../assets/8222-success.json'
+import * as successAnimationData from '../assets/645-success.json'
 
 
 const defaultOptions = {
