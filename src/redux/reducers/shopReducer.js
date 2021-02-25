@@ -19,6 +19,7 @@ const initialState = {
     selectedSneaker: null,
     categories: _categories.map(el => ({ label: el, value: el })),
     selectedCategories: _categories,
+    showLogin: false,
     cart: [],
     showCart: false,
     auth: null
