@@ -64,7 +64,7 @@ const Profile = () => {
                             <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80" alt="" />
                         </div>
                     </button>
-                    <span className="text-white font-medium ml-2">{auth?.name}</span>
+                    <span className="dark:text-white text-gray-800 font-medium ml-2">{auth?.name}</span>
                 </div>}
                 {!auth && (
                     <div className="dark:text-white font-bold">
