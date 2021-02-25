@@ -80,6 +80,11 @@ function shopReducer(state = initialState, action) {
                 ...state,
                 auth: action.payload
             }
+        case "emptyCart":
+            return {
+                ...state,
+                cart: []
+            }
         case "signOut":
             return {
                 ...state,
