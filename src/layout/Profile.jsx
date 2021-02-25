@@ -68,7 +68,9 @@ const Profile = () => {
                 </div>}
                 {!auth && (
                     <div className="dark:text-white font-bold">
-                        <span onClick={() => setShowLogin(true)} className="mr-2 cursor-pointer">Login</span>
+                        <span onClick={() => dispatch({
+                            type: "toggleLogin"
+                        })} className="mr-2 cursor-pointer">Login</span>
                         <span onClick={() => setShowRegister(true)} className="cursor-pointer">Register</span>
                     </div>
                 )}
@@ -93,7 +95,9 @@ const Profile = () => {
             </div>
 
 
-            <Modal show={showLogin} canClose={!loading} setShow={setShowLogin}>
+            <Modal show={showLogin} canClose={!loading} setShow={() => dispatch({
+                type: "toggleLogin"
+            })}>
                 <div className="py-4 px-5 bg-white">
                     <div className="mb-3">
                         <h3 className="text-gray-800 text-2xl font-medium">Login</h3>
