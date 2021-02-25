@@ -8,14 +8,15 @@ import { LOGIN_QUERY } from '../graphql/queries';
 import { useOutsideClick } from '../hooks';
 import { useDispatch } from 'react-redux'
 import { notification } from 'antd';
+import { useForm } from 'react-hook-form';
 
 const Profile = () => {
     const profileMenuRef = useRef(null);
     useOutsideClick(profileMenuRef, () => {
         setShowProfileMenu(false)
     })
+    const { register, errors, handleSubmit, reset } = useForm()
     const [showProfileMenu, setShowProfileMenu] = useState(false);
-    const [, setShowLogin] = useState(false);
     const [rememberme, setRememberme] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
     const [username, setEmail] = useState("");
@@ -30,7 +31,9 @@ const Profile = () => {
                 input: { username, password }
             }
         }).then(({ data: { authenticate } }) => {
-            console.log(authenticate)
+            // console.log(authenticate)
+            setPassword("");
+            setEmail("");
             dispatch({
                 type: "authenticateUser",
                 payload: authenticate?.user
@@ -46,7 +49,7 @@ const Profile = () => {
                 })
             })
     }
-    const onRegisterClicked = () => { }
+    const onRegisterClicked = values => { }
 
     const onSignOutClicked = () => {
         dispatch({ type: "signOut" })
