@@ -21,7 +21,7 @@ const Cart = () => {
     const [itemsOrdered, setItemsOrdered] = useState(false);
     const sumOfCart = cart.reduce((acc, curr) => acc + (curr.qty * curr.retail_price_cents), 0);
     const dispatch = useDispatch();
-    
+
     useEffect(() => {
         if (itemsOrdered) {
             dispatch({
@@ -35,13 +35,14 @@ const Cart = () => {
         <Fragment>
             {itemsOrdered ?
                 <div className="bg-white dark:bg-gray-800 sm:hidden lg:block   max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
-                    <div className="h-full flex justify-center items-center">
+                    <div className="h-full flex flex-col justify-center items-center">
                         <Lottie options={defaultOptions}
                             height={400}
                             width={400}
                             isPaused={false}
                             isStopped={false}
                         />
+                        <h3 className="dark:text-white text-center font-medium text-2xl">Your order has been placed successfully</h3>
                     </div>
                 </div>
                 :
