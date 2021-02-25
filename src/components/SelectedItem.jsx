@@ -35,7 +35,7 @@ const SelectedItem = () => {
 
     return !item ? null : (
         <Fragment>
-            <div class="bg-white dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
+            <div class="bg-white sm:hidden dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
                 <div class="h-full px-6 py-6 lg:w-full">
                     {/* <!-- Start right column area --> */}
                     <div class="h-full relative overflow-scroll" >
