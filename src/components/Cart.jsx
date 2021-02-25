@@ -2,13 +2,14 @@ import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import CartItem from './CartItem';
 import EmptyCartIcon from './EmptyCartIcon'
-import { BiCart } from 'react-icons/bi'
+import { BiCart } from 'react-icons/bi';
+import Lottie from 'react-lottie';
+import * as successAnimationData from '../assets/8222-success.json'
+
 
 const Cart = () => {
     const { selectedSneaker: item, cart } = useSelector(state => state);
-
     const sumOfCart = cart.reduce((acc, curr) => acc + (curr.qty * curr.retail_price_cents), 0)
-
     return item ? null : (
         <Fragment>
             <div class="bg-white sm:hidden lg:block dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
