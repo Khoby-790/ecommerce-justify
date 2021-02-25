@@ -30,9 +30,7 @@ const SelectedItem = () => {
 
         setShowPhoneModal(false);
     }
-
     const message = `hey i just found the ${item?.name} and you wont believe it, it goes for a cool ${item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
-
     return !item ? null : (
         <Fragment>
             <div class="bg-white sm:hidden lg:block dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
