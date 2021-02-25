@@ -55,7 +55,7 @@ const Profile = () => {
     return (
         <Fragment>
             <div class="ml-4 relative flex-shrink-0">
-                {auth && <div className="flex flex-row" onClick={() => setShowProfileMenu(c => !c)}>
+                {auth && <div className="flex flex-row items-center" onClick={() => setShowProfileMenu(c => !c)}>
                     <button class="bg-yellow-600 dark:bg-green-400 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white" id="user-menu" aria-haspopup="true">
                         <span class="sr-only">Open user menu</span>
                         <div className=" h-10 w-10 flex items-center justify-center rounded-full">
