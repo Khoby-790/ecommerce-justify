@@ -39,7 +39,7 @@ const Cart = () => {
         } else {
             notification.warn({
                 message: "Alert!!",
-                description: "Please login to your account to be able to place this order"
+                description: "Please login to your account to be able to place this order. If you do not have an account then please register. Thank you"
             })
         }
     }
