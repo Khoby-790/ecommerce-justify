@@ -4,11 +4,12 @@ import React, { Fragment, useState, useRef } from 'react'
 import { useSelector } from 'react-redux';
 import { Transition } from '../components'
 import Modal from '../components/Modal';
-import { LOGIN_QUERY } from '../graphql/queries';
+import { LOGIN_QUERY, REGISTER_QUERY } from '../graphql/queries';
 import { useOutsideClick } from '../hooks';
 import { useDispatch } from 'react-redux'
-import { notification } from 'antd';
+import { notification, Spin } from 'antd';
 import { useForm } from 'react-hook-form';
+import _ from 'lodash';
 
 const Profile = () => {
     const profileMenuRef = useRef(null);
@@ -23,7 +24,7 @@ const Profile = () => {
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
     const [login, { loading }] = useMutation(LOGIN_QUERY);
-
+    const [registerM, { loading: registering }] = useMutation(REGISTER_QUERY)
     const onLoginClicked = () => {
         if (!username || !password) return;
         login({
@@ -50,7 +51,23 @@ const Profile = () => {
             })
     }
     const onRegisterClicked = values => {
-        alert(JSON.stringify(values))
+        registerM({
+            variables: {
+                input: _.omit(values, ["confirm_password"])
+            }
+        }).then(({ data: { register } }) => {
+            dispatch({
+                type: "authenticateUser",
+                payload: register?.user
+            })
+            setShowRegister(false)
+        })
+            .catch(err => {
+                notification.error({
+                    message: "Error",
+                    description: err.message
+                })
+            })
     }
 
     const onSignOutClicked = () => {
@@ -132,35 +149,37 @@ const Profile = () => {
             </Modal>
 
             <Modal show={showRegister} setShow={setShowRegister}>
-                <form onSubmit={handleSubmit(onRegisterClicked)} className="py-4 px-5 bg-white">
-                    <div className="mb-3">
-                        <h3 className="text-gray-800 text-2xl font-medium">Register</h3>
-                        <p>Fill out the form to make your lofe easier on the platform</p>
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="">Name</label>
-                        <input name="name" ref={register({ required: true })} type="text" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="">Email</label>
-                        <input name="email" ref={register({ required: true })} type="email" placeholder="eg. johdoe@mail.com" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="">Phone</label>
-                        <input name="phone" ref={register({ required: true })} type="text" placeholder="eg. 02744855686" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
-                    </div>
-                    <div className="flex mb-2 flex-col">
-                        <label htmlFor="">Password</label>
-                        <input name="password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
-                    </div>
-                    <div className="flex mb-2 flex-col">
-                        <label htmlFor="">Confirm Password</label>
-                        <input name="confirm_password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
-                    </div>
-                    <div className="flex flex-col">
-                        <button type="submit" className="bg-green-700 rounded-md text-white py-3">Sign in</button>
-                    </div>
-                </form>
+                <Spin spinning={registering}>
+                    <form onSubmit={handleSubmit(onRegisterClicked)} className="py-4 px-5 bg-white">
+                        <div className="mb-3">
+                            <h3 className="text-gray-800 text-2xl font-medium">Register</h3>
+                            <p>Fill out the form to make your lofe easier on the platform</p>
+                        </div>
+                        <div className="flex flex-col">
+                            <label htmlFor="">Name</label>
+                            <input name="name" ref={register({ required: true })} type="text" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        </div>
+                        <div className="flex flex-col">
+                            <label htmlFor="">Email</label>
+                            <input name="email" ref={register({ required: true })} type="email" placeholder="eg. johdoe@mail.com" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        </div>
+                        <div className="flex flex-col">
+                            <label htmlFor="">Phone</label>
+                            <input name="phone" ref={register({ required: true })} type="text" placeholder="eg. 02744855686" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        </div>
+                        <div className="flex mb-2 flex-col">
+                            <label htmlFor="">Password</label>
+                            <input name="password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        </div>
+                        <div className="flex mb-2 flex-col">
+                            <label htmlFor="">Confirm Password</label>
+                            <input name="confirm_password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
+                        </div>
+                        <div className="flex flex-col">
+                            <button type="submit" className="bg-green-700 rounded-md text-white py-3">Sign in</button>
+                        </div>
+                    </form>
+                </Spin>
             </Modal>
 
 
