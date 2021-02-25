@@ -14,3 +14,17 @@ mutation login($input: authenticateInput) {
   }
 }
 `
+
+export const REGISTER_QUERY = gql`
+mutation register($input: registerInput) {
+  register(input: $input) {
+    token
+    user {
+      phone
+      email
+      name
+      id
+    }
+  }
+}
+`
