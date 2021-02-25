@@ -23,14 +23,14 @@ const Cart = () => {
                                     </div>
                                 </Fragment>
                             )}
-                            <div className="h-full flex justify-between flex-col">
+                            {cart.length && <div className="h-full flex justify-between flex-col">
                                 <div className="flex justify-between">
                                     <div>
                                         <h3 className="font-light dark:text-gray-100 dark:font-bold text-2xl">Your cart</h3>
                                         <p className="dark:text-gray-300 text-gray-800">Proceed to checkout</p>
                                     </div>
                                     <div className="flex justify-end">
-                                        
+
                                     </div>
                                 </div>
                                 <div className="flex-1 pb-4 overflow-scroll">
@@ -53,7 +53,7 @@ const Cart = () => {
                                     </div>
                                 </div>
 
-                            </div>
+                            </div>}
 
                         </div>
                     </div>
