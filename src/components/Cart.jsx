@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CartItem from './CartItem';
 import EmptyCartIcon from './EmptyCartIcon'
 import { BiCart } from 'react-icons/bi';
@@ -20,12 +20,16 @@ const Cart = () => {
     const { selectedSneaker: item, cart } = useSelector(state => state);
     const [itemsOrdered, setItemsOrdered] = useState(false);
     const sumOfCart = cart.reduce((acc, curr) => acc + (curr.qty * curr.retail_price_cents), 0);
-
+    const dispatch = useDispatch();
+    
     useEffect(() => {
         if (itemsOrdered) {
+            dispatch({
+                type: "emptyCart"
+            })
             setTimeout(() => setItemsOrdered(false), 3000)
         }
-    }, [itemsOrdered])
+    }, [dispatch, itemsOrdered])
 
     return item ? null : (
         <Fragment>
