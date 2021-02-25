@@ -7,11 +7,8 @@ import useDarkMode from '../hooks/useDarkMode';
 import Profile from './Profile';
 
 const ShopNavbar = () => {
-
-    const cart = useSelector(state => state.cart)
-
+    const cart = useSelector(state => state.cart);
     const [theme, setTheme] = useDarkMode();
-
     return (
         <Fragment>
             <nav class="flex-shrink-0 bg-white dark:bg-gray-800 dark:border-gray-500 border-b border-gray-300">
