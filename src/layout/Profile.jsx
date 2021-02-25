@@ -15,7 +15,7 @@ const Profile = () => {
         setShowProfileMenu(false)
     })
     const [showProfileMenu, setShowProfileMenu] = useState(false);
-    const [showLogin, setShowLogin] = useState(false);
+    const [, setShowLogin] = useState(false);
     const [rememberme, setRememberme] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
     const [username, setEmail] = useState("");
@@ -35,7 +35,9 @@ const Profile = () => {
                 type: "authenticateUser",
                 payload: authenticate?.user
             })
-            setShowLogin(false)
+            dispatch({
+                type: "toggleLogin"
+            })
         })
             .catch(err => {
                 notification.error({
@@ -51,7 +53,7 @@ const Profile = () => {
         setShowProfileMenu(false)
     }
 
-    const auth = useSelector(state => state.auth)
+    const { auth, showLogin } = useSelector(state => state)
     return (
         <Fragment>
             <div class="ml-4 relative flex-shrink-0">

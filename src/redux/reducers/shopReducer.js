@@ -63,7 +63,11 @@ function shopReducer(state = initialState, action) {
                 ...state,
                 selectedCategories: hasIt ? [...state.selectedCategories.filter(el => el !== action.payload)] : [...state.selectedCategories, action.payload]
             }
-
+        case "toggleLogin":
+            return {
+                ...state,
+                showLogin: !state.showLogin
+            }
         case "addToCart":
             return {
                 ...state,
