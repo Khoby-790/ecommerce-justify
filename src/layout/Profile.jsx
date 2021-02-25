@@ -55,14 +55,14 @@ const Profile = () => {
     return (
         <Fragment>
             <div class="ml-4 relative flex-shrink-0">
-                {auth && <div onClick={() => setShowProfileMenu(c => !c)}>
+                {auth && <div className="flex flex-row" onClick={() => setShowProfileMenu(c => !c)}>
                     <button class="bg-yellow-600 dark:bg-green-400 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-400 focus:ring-white" id="user-menu" aria-haspopup="true">
                         <span class="sr-only">Open user menu</span>
                         <div className=" h-10 w-10 flex items-center justify-center rounded-full">
                             <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80" alt="" />
                         </div>
-                        <span>{"Name"}</span>
                     </button>
+                    <span>{"Name"}</span>
                 </div>}
                 {!auth && (
                     <div className="dark:text-white font-bold">
