@@ -28,7 +28,7 @@ const Cart = () => {
             dispatch({
                 type: "emptyCart"
             })
-            setTimeout(() => setItemsOrdered(false), 3000)
+            setTimeout(() => setItemsOrdered(false), 7000)
         }
     }, [dispatch, itemsOrdered])
 
@@ -55,6 +55,7 @@ const Cart = () => {
                             isPaused={false}
                             isStopped={false}
                         />
+                        <h3 className="dark:text-white text-center font-medium text-2xl">Hey {auth?.name}</h3>
                         <h3 className="dark:text-white text-center font-medium text-2xl">Your order has been placed successfully</h3>
                     </div>
                 </div>
