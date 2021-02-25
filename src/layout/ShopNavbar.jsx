@@ -85,7 +85,7 @@ const ShopNavbar = () => {
 
       Menu open: "block", Menu closed: "hidden"
     --> */}
-                <div class="lg:hidden">
+                <div class="lg:hidden hidden">
                     <div class="px-2 pt-2 pb-3">
                         <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-800">Dashboard</a>
                         <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Support</a>
