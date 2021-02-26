@@ -10,8 +10,6 @@ const Shop = () => {
                 <ShopNavbar />
                 <ShopContent />
             </div>
-
-
         </Fragment>
     )
 }
