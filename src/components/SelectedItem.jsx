@@ -102,7 +102,9 @@ const SelectedItem = () => {
                     </button>
                 </div>
 
-                <QRCode />
+                <div className="w-auto flex items-center justify-center mb-2">
+                    <QRCode value="google.com" />
+                </div>
             </Modal>
 
         </Fragment>
