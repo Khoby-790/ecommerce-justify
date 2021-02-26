@@ -25,7 +25,7 @@ const FlitersPane = () => {
         dispatch({
             type: "SelectCategory",
             payload: value
-        })
+        }) 
     }
 
     return (
