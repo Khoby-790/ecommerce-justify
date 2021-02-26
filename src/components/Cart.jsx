@@ -2,7 +2,6 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartItem from './CartItem';
 import EmptyCartIcon from './EmptyCartIcon'
-import { BiCart } from 'react-icons/bi';
 import Lottie from 'react-lottie';
 import successAnimationData from '../assets/645-success.json'
 import { notification } from 'antd';
