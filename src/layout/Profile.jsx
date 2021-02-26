@@ -126,11 +126,11 @@ const Profile = () => {
                         <p>Provide your valid details to be able to access your account</p>
                     </div>
                     <div className="flex flex-col">
-                        <label htmlFor="">Username</label>
+                        <label htmlhtmlFor="">Username</label>
                         <input value={username} onChange={e => setEmail(e.target.value)} type="text" placeholder="email or phone" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex mb-2 flex-col">
-                        <label htmlFor="">Password</label>
+                        <label htmlhtmlFor="">Password</label>
                         <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                     </div>
                     <div className="flex mb-3 items-center">
@@ -156,23 +156,23 @@ const Profile = () => {
                             <p>Fill out the form to make your lofe easier on the platform</p>
                         </div>
                         <div className="flex flex-col">
-                            <label htmlFor="">Name</label>
+                            <label htmlhtmlFor="">Name</label>
                             <input name="name" ref={register({ required: true })} type="text" placeholder="eg. Jone Doe" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                         </div>
                         <div className="flex flex-col">
-                            <label htmlFor="">Email</label>
+                            <label htmlhtmlFor="">Email</label>
                             <input name="email" ref={register({ required: true })} type="email" placeholder="eg. johdoe@mail.com" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                         </div>
                         <div className="flex flex-col">
-                            <label htmlFor="">Phone</label>
+                            <label htmlhtmlFor="">Phone</label>
                             <input name="phone" ref={register({ required: true })} type="text" placeholder="eg. 02744855686" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                         </div>
                         <div className="flex mb-2 flex-col">
-                            <label htmlFor="">Password</label>
+                            <label htmlhtmlFor="">Password</label>
                             <input name="password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                         </div>
                         <div className="flex mb-2 flex-col">
-                            <label htmlFor="">Confirm Password</label>
+                            <label htmlhtmlFor="">Confirm Password</label>
                             <input name="confirm_password" ref={register({ required: true })} type="password" placeholder="*****" className="outline-none h-12 px-2 focus:outline-none border border-gray-300" />
                         </div>
                         <div className="flex flex-col">
