@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { BiCart } from 'react-icons/bi'
 import { ImWhatsapp } from 'react-icons/im'
 import Modal from './Modal'
+import QRCode from 'qrcode.react'
 
 
 const SelectedItem = () => {
@@ -100,6 +101,8 @@ const SelectedItem = () => {
                         Send link
                     </button>
                 </div>
+
+                <QRCode />
             </Modal>
 
         </Fragment>
