@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment, useRef, useState } from 'react';
+import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
-import { Transition } from '../components';
-import Cart from '../components/Cart';
+// import { Transition } from '../components';
+// import Cart from '../components/Cart';
 import useDarkMode from '../hooks/useDarkMode';
 import Profile from './Profile';
 

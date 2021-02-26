@@ -16,7 +16,7 @@ const Profile = () => {
     useOutsideClick(profileMenuRef, () => {
         setShowProfileMenu(false)
     })
-    const { register, handleSubmit, reset } = useForm()
+    const { register, handleSubmit } = useForm()
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const [rememberme, setRememberme] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
