@@ -93,7 +93,7 @@ const Cart = () => {
                                                 <svg className="text-white h-6 dark:text-gray-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                                                 </svg>
-                                                <h2 className="ml-6">Checkout</h2>
+                                                <h2 className="ml-6 text-white dark:text-gray-800">Checkout</h2>
                                             </div>
                                             <div className="px-4">
                                                 <h2 className="dark:text-gray-900 font-extrabold text-white">{sumOfCart?.toLocaleString("en-US", { style: "currency", currency: "USD" })}</h2>
