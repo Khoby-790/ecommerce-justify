@@ -30,7 +30,7 @@ const FlitersPane = () => {
 
     return (
         <Fragment>
-            <div class="border-b sm:hidden md:block lg:block border-gray-200 dark:border-gray-500 xl:border-b-0 xl:flex-shrink-0 dark:bg-gray-800 xl:w-72 xl:border-r xl:border-gray-200 bg-white">
+            <div class="border-b sm:hidden md:hidden lg:block border-gray-200 dark:border-gray-500 xl:border-b-0 xl:flex-shrink-0 dark:bg-gray-800 xl:w-72 xl:border-r xl:border-gray-200 bg-white">
                 <div class="h-full py-2 sm:pl-6 lg:pl-8 xl:pl-0">
                     <div class="h-full w-full" >
                         <div class=" inset-0">
