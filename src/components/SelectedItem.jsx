@@ -75,7 +75,7 @@ const SelectedItem = () => {
 
                                     <div className="h-13">
                                         <div onClick={addToCart} className="flex w-full cursor-pointer items-center justify-between rounded-lg dark:bg-gray-100 dark:text-gray-900  text-white bg-gray-900 py-3">
-                                            <div className="flex px-4 items-center ">
+                                            <div className="flex px-4 items-end ">
                                                 <BiCart size={30} className="text-white dark:text-gray-900" />
                                                 <h2 className="ml-6 text-white dark:text-gray-800">Add to cart</h2>
                                             </div>
