@@ -10,7 +10,7 @@ const ItemsListing = () => {
     const items = useSelector(state => state.sneakers)
     return (
         <Fragment>
-            <div class="bg-white md:block md:h-full md:w-full dark:bg-gray-800 lg:min-w-0 lg:flex-1">
+            <div class="bg-white h-full w-full dark:bg-gray-800 lg:min-w-0 lg:flex-1">
                 <div class="h-full py-6 px-2 sm:px-6 lg:px-2">
                     {/* <!-- Start main area--> */}
                     <div class="relative h-full overflow-scroll" >
