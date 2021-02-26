@@ -27,14 +27,14 @@ const FliterItemDropDown = ({ name, list = [], onItemClicked, selectedValues = [
                 leaveTo="opacity-0 d-none scale-95"
                 show={showDetails}
             >
-                <ul class="relative bg-white dark:bg-gray-700 rounded-md -space-y-px">
+                <ul className="relative bg-white dark:bg-gray-700 rounded-md -space-y-px">
                     {list.map(({ label, value }, key) => (
                         <li key={key}>
                             {/* <!-- On: "bg-indigo-50 border-indigo-200 z-10", Off: "border-gray-200" --> */}
-                            <div class="relative border dark:border-gray-500  py-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-1">
-                                <label class="flex items-center text-sm cursor-pointer">
-                                    <input checked={selectedValues.includes(value)} onClick={() => { onItemClicked && onItemClicked(value) }} value={value} name="pricing_plan" type="checkbox" class="focus:ring-gray-500 h-4 w-4 text-gray-600 dark:text-white cursor-pointer dark:bg-white bg-gray-600 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0" />
-                                    <span class="ml-3 font-light dark:text-white text-gray-900">{label}</span>
+                            <div className="relative border dark:border-gray-500  py-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-1">
+                                <label className="flex items-center text-sm cursor-pointer">
+                                    <input checked={selectedValues.includes(value)} onClick={() => { onItemClicked && onItemClicked(value) }} value={value} name="pricing_plan" type="checkbox" className="focus:ring-gray-500 h-4 w-4 text-gray-600 dark:text-white cursor-pointer dark:bg-white bg-gray-600 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0" />
+                                    <span className="ml-3 font-light dark:text-white text-gray-900">{label}</span>
                                 </label>
                             </div>
                         </li>

@@ -33,11 +33,11 @@ const SelectedItem = () => {
     const message = `hey i just found the ${item?.name} and you wont believe it, it goes for a cool ${item?.retail_price_cents?.toLocaleString("en-US", { style: "currency", currency: "USD" })}`
     return !item ? null : (
         <Fragment>
-            <div class="bg-white sm:hidden lg:block dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
-                <div class="h-full px-6 py-6 lg:w-full">
+            <div className="bg-white sm:hidden lg:block dark:bg-gray-800  max-w-md w-full lg:flex-shrink-0 lg:border-l dark:border-gray-500 lg:border-gray-200 xl:pr-0">
+                <div className="h-full px-6 py-6 lg:w-full">
                     {/* <!-- Start right column area --> */}
-                    <div class="h-full relative overflow-scroll" >
-                        <div class="absolute inset-0 rounded-lg">
+                    <div className="h-full relative overflow-scroll" >
+                        <div className="absolute inset-0 rounded-lg">
                             <Fragment>
                                 <div className="flex justify-between flex-col h-full">
                                     <div className="flex justify-between">

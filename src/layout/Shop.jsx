@@ -6,7 +6,7 @@ import ShopNavbar from './ShopNavbar'
 const Shop = () => {
     return (
         <Fragment>
-            <div class="relative min-h-screen flex flex-col">
+            <div className="relative min-h-screen flex flex-col">
                 <ShopNavbar />
                 <ShopContent />
             </div>

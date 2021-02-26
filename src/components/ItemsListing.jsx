@@ -10,11 +10,11 @@ const ItemsListing = () => {
     const items = useSelector(state => state.sneakers)
     return (
         <Fragment>
-            <div class="bg-white h-full w-full dark:bg-gray-800 lg:min-w-0 lg:flex-1">
-                <div class="h-full py-6 px-2 sm:px-6 lg:px-2">
+            <div className="bg-white h-full w-full dark:bg-gray-800 lg:min-w-0 lg:flex-1">
+                <div className="h-full py-6 px-2 sm:px-6 lg:px-2">
                     {/* <!-- Start main area--> */}
-                    <div class="relative h-full overflow-scroll" >
-                        <div class="absolute inset-0 rounded-lg">
+                    <div className="relative h-full overflow-scroll" >
+                        <div className="absolute inset-0 rounded-lg">
                             {/* Sort Layer */}
                             <div className="flex justify-between mb-3">
                                 <h1 className="font-bold dark:text-white text-xl">New Arrivals</h1>

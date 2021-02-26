@@ -7,9 +7,9 @@ import Cart from '../components/Cart'
 const ShopContent = () => {
     return (
         <Fragment>
-            <div class="flex-grow w-full lg:flex">
+            <div className="flex-grow w-full lg:flex">
                 {/* <!-- Left sidebar & main wrapper --> */}
-                <div class="flex-1 min-w-0 bg-white dark:bg-gray-800 xl:flex">
+                <div className="flex-1 min-w-0 bg-white dark:bg-gray-800 xl:flex">
                     <FlitersPane />
                     <ItemsListing />
                 </div>
