@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 
 const client = new ApolloClient({
-    uri: 'http://localhost:8000',
+    uri: 'https://powerful-plains-98910.herokuapp.com/',
     cache: new InMemoryCache()
 });
 
